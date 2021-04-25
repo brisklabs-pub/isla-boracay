@@ -62,9 +62,11 @@ figure {
     height: 700px;
   }
 }
-.cover.hero-2,
-.hero.hero-2 {
-  height: 600px;
+.temperature-widget {
+  top: 10px; 
+  left: 10px; 
+  position:absolute;
+  background-color: rgb(225, 225, 225, 0.4); 
 }
 .cover {
   background-size: cover;
@@ -221,6 +223,14 @@ figure {
 .listing .item-wrap .listing-item:hover p {
   color: white;
 }
+.news p {
+  color: #4d4d4d;;
+}
+.news h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
+}
 .news ul {
   padding: 0;
   margin: 0;
@@ -237,7 +247,8 @@ figure {
 }
 .news ul li a .date {
   font-family: Arial, sans-serif;
-  color: rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
   text-transform: uppercase;
   font-size: 12px;
   font-weight: bold;
@@ -248,8 +259,10 @@ figure {
 .news ul li a h3 {
   margin-bottom: 10px;
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.75);
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.9);
 }
+
 .news ul li a:hover {
   background: #ebebeb;
   padding-left: 30px;
