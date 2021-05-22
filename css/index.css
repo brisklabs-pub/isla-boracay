@@ -2,12 +2,15 @@ html {
    scroll-behavior: smooth;
  }
  body {
-   font: 12px Montserrat, sans-serif;
-   line-height: 1.8;
-   font-weight: normal;
-   background: #fff !important;
-   color: #4d4d4d;
+   max-width: 100%;
+   overflow-x: hidden;
+   font-family: "Poppins", Arial, sans-serif;
+   font-size: 14px;
  }
+ a, p {
+   font-weight: normal;
+ }
+
  .bg-img {
    background-image: url("../images/bg-image.jpg");
    min-height: 250px;
@@ -61,26 +64,4 @@ html {
       text-shadow: 1px 1px #504d4d;
       color: rgb(255, 255, 255);
    }
-}
-.social-icons > a {
-   padding: 4px 10px;
-   color: rgb(15, 15, 15);
-}
-.social-icons > a i {
-   font-size: 26px;
-}
- .social-icons > a:hover, 
- .social-icons > a:focus, 
- .social-icons > a:active {
-   text-decoration: none;
-   color: rgb(122, 119, 119);
-}
-.footer {
-   padding: 30px 0 20px;
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   color: white;
-   text-align: center;
 }
