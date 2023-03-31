@@ -21,6 +21,11 @@ window.onload = (event) => {
   onClick(relax, ()=>{
     openTab('relax');
   });
+
+  const party = elementBy('party-tab');
+  onClick(party, ()=>{
+    openTab('party');
+  });
 };
 
 function openTab(page) {
