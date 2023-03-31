@@ -22,82 +22,108 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
    <link rel="stylesheet" href="css/index.css">
 
-
 </head>
 
 <body>
-
    <!-- Header -->
    <div class="bg-img">
       <div class=" header text-center">
          <h1><strong>Welcome to Isla Boracay</strong< /h1>
-         <p>Things you need to know in boracay, ENJOY!</p>
+               <p>Things you need to know in boracay, ENJOY!</p>
       </div>
    </div>
+   <section>
+      <div class="body-container">
+         <!-- Tab links -->
+         <div class="main-tab">
+            <button id="eat-tab" class="main-tab-links">EAT</button>
+            <button id="fun-tab" class="main-tab-links">ACTIVITIES</button>
+            <button id="stay-tab" class="main-tab-links">STAY</button>
+            <button id="relax-tab" class="main-tab-links">RELAX</button>
+         </div>
 
-   <!-- Content -->
-   <div class="section">
-      <h2>Food & Drink</h2>
-      <p>Discover the best restaurants and food places in Boracay Island.</p>
-   </div>
+         <!-- Tab content -->
+         <div id="eat" class="main-tab-content">
+            <!-- Content -->
+            <div class="card-section">
+               <h2>Food & Drink</h2>
+               <p>Discover the best restaurants and food places in Boracay Island.</p>
+            </div>
 
-   <div class="row">
-      <div class="column">
-         <div class="card" style="background-image: url('./images/resto/epic.jpeg');">
-            <div class="card__content">
-               <h3 class="text">Epic Boracay</h3>
-               <p>Beachfront, D'Mall of Boracay Boracay</p>
+            <div class="row">
+               <div class="column">
+                  <div class="card" style="background-image: url('./images/resto/epic.jpeg');">
+                     <div class="card__content">
+                        <h3 class="text">Epic Boracay</h3>
+                        <p>Beachfront, D'Mall of Boracay Boracay</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="column">
+                  <div class="card" style="background-image: url('./images/resto/villa.jpeg');">
+                     <div class="card__content">
+                        <h3 class="text">Villa Caemilla</h3>
+                        <p>Station 3, White Beach</p>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="column">
+                  <div class="card" style="background-image: url('./images/resto/cafedelsolph.jpeg');">
+                     <div class="card__content">
+                        <h3 class="text">Cafe del Sol</h3>
+                        <p>D'mall of Boracay, Beachfront</p>
+                     </div>
+                  </div>
+               </div>
+
+
+               <div class="column">
+                  <div class="card" style="background-image: url('./images/resto/jonah.jpeg');">
+                     <div class="card__content">
+                        <h3 class="text">Jonahs Fruit Shake</h3>
+                        <p>Station 1, Malay, Philippines</p>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
-      </div>
 
-      <div class="column">
-         <div class="card" style="background-image: url('./images/resto/villa.jpeg');">
-            <div class="card__content">
-               <h3 class="text">Villa Caemilla</h3>
-               <p>Station 3, White Beach</p>
+         <!-- FUN TAB -->
+         <div id="fun" class="main-tab-content">
+            <div class="card-section">
+               <h2>Activities</h2>
+               <p>Experience Boracay like never before with our activities.</p>
+            </div>
+
+            <div class="row">
+               <div class="column">
+                  <div class="card" style="background-image: url('./images/activities/thata_boracay.jpeg');">
+                     <div class="card__content">
+                        <h3 class="text">Thata Boracay Activities</h3>
+                        <p>Station 1, Boracay</p>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
-      </div>
 
-      <div class="column">
-         <div class="card" style="background-image: url('./images/resto/cafedelsolph.jpeg');">
-            <div class="card__content">
-               <h3 class="text">Cafe del Sol</h3>
-               <p>D'mall of Boracay, Beachfront</p>
-            </div>
+         <div id="stay" class="main-tab-content">
+
          </div>
-      </div>
 
+         <div id="relax" class="main-tab-content">
 
-      <div class="column">
-         <div class="card" style="background-image: url('./images/resto/jonah.jpeg');">
-            <div class="card__content">
-               <h3 class="text">Jonahs Fruit Shake</h3>
-               <p>Station 1, Malay, Philippines</p>
-            </div>
          </div>
+
       </div>
-   </div>
 
-   <div class="section">
-      <h2>Activities</h2>
-      <p>Experience Boracay like never before with our activities.</p>
-   </div>
-
-   <div class="row">
-      <div class="column">
-         <div class="card" style="background-image: url('./images/activities/thata_boracay.jpeg');">
-            <div class="card__content">
-               <h3 class="text">Thata Boracay Activities</h3>
-               <p>Station 1, Boracay</p>
-            </div>
-         </div>
+      <div class="side-space-container">
+         <!-- add here -->
       </div>
-   </div>
 
-
-
+   </section>
 
 
    <!-- Footer -->
@@ -122,6 +148,9 @@
          </div>
       </div>
    </footer>
+
+   <script type="text/javascript" src="./js/main.js"></script>
+
 </body>
 
 </html>
