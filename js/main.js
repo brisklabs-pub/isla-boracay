@@ -21,7 +21,7 @@ window.onload = (event) => {
 };
 
 function addData(type) {
-  const url = baseURL + type
+  const url = baseURL + type +'.json'
   fetch(url)
   .then((response) => response.json())
   .then((json) => {
