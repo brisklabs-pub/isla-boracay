@@ -2,28 +2,28 @@
     {
         "name": "Epic Boracay",
         "address": "Beachfront, D'Mall of Boracay",
-        "thumbnail": "",
+        "thumbnail": "./images/resto/epic.jpeg",
         "contact": "",
         "notes": ""
     },
     {
         "name": "Villa Caemilla",
         "address": "Beachfront, D'Mall of Boracay Boracay",
-        "thumbnail": "",
+        "thumbnail": "./images/resto/villa.jpeg",
         "contact": "",
         "notes": ""
     },
     {
         "name": "Cafe del Sol",
         "address": "D'mall of Boracay, Beachfront",
-        "thumbnail": "",
+        "thumbnail": "./images/resto/cafedelsolph.jpeg",
         "contact": "",
         "notes": ""
     },
     {
         "name": "Jonahs Fruit Shake",
         "address": "Station 1, Malay, Philippines",
-        "thumbnail": "",
+        "thumbnail": "./images/resto/jonah.jpeg",
         "contact": "",
         "notes": ""
     }

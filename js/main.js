@@ -1,3 +1,4 @@
+const baseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/';
 window.onload = (event) => {
   // Standing
   openTab('eat');
@@ -12,18 +13,39 @@ window.onload = (event) => {
   const party = elementBy('party-tab');
   onClick(party, ()=>{ openTab('party');});
 
-  addData();
+  addData('eat');
+  addData('fun');
+  addData('stay');
+  addData('relax');
+  addData('party');
 };
 
+function addData(type) {
+  const url = baseURL + type
+  fetch(url)
+  .then((response) => response.json())
+  .then((json) => {
+    let tab = elementBy(type + '-content');
+    removeAllDOMChildren(tab);
+    for (index in json) {
+      const item = json[index];
+      const row = cardView(item);
+      tab.appendChild(row);
+    }
+  });
+}
 
-function addData() {
-  var eatData = JSON.parse('eats.json');
-  let tab = elementBy('eat');
-  for (item in eatData) {
-    console.log(item);
-  }
-
-
+function cardView(item) {
+  const card = document.createElement('div');
+  card.setAttribute('class', 'column');
+  card.innerHTML = `
+  <div class="card" style="background-image: url(${item.thumbnail});">
+    <div class="card__content">
+      <h3 class="text">${item.name}</h3>
+        <p>${item.address}</p>
+    </div>
+  </div>`;
+  return card;
 }
 
 function openTab(page) {
