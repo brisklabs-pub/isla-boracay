@@ -1,32 +1,30 @@
 window.onload = (event) => {
   // Standing
   openTab('eat');
-
   const eat = elementBy('eat-tab');
-  onClick(eat, ()=>{
-    openTab('eat');
-  });
-
+  onClick(eat, ()=>{ openTab('eat'); });
   const fun = elementBy('fun-tab');
-  onClick(fun, ()=>{
-    openTab('fun');
-  });
-
+  onClick(fun, ()=>{ openTab('fun'); });
   const stay = elementBy('stay-tab');
-  onClick(stay, ()=>{
-    openTab('stay');
-  });
-
+  onClick(stay, ()=>{ openTab('stay'); });
   const relax = elementBy('relax-tab');
-  onClick(relax, ()=>{
-    openTab('relax');
-  });
-
+  onClick(relax, ()=>{ openTab('relax'); });
   const party = elementBy('party-tab');
-  onClick(party, ()=>{
-    openTab('party');
-  });
+  onClick(party, ()=>{ openTab('party');});
+
+  addData();
 };
+
+
+function addData() {
+  var eatData = JSON.parse('eats.json');
+  let tab = elementBy('eat');
+  for (item in eatData) {
+    console.log(item);
+  }
+
+
+}
 
 function openTab(page) {
   // Declare all variables
@@ -58,4 +56,15 @@ function onClick(element, action) {
     if (element) {
         element.addEventListener("click", action);
     }
+}
+
+function removeAllDOMChildren(parent) {
+  if(parent) {
+    // Create the Range object
+    var rangeObj = new Range();
+    // Select all of parent's children
+    rangeObj.selectNodeContents(parent);
+    // Delete everything that is selected
+    rangeObj.deleteContents();
+  }
 }
