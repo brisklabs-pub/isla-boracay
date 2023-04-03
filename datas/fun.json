@@ -5,5 +5,12 @@
         "thumbnail": "./images/activities/thata_boracay.jpeg",
         "contact": "",
         "notes": ""
+    },
+    {
+        "name": "Padayon Kitesurfing",
+        "address": "Bolabog Beach, Malay, Philippines",
+        "thumbnail": "./images/activities/padayonKitesurfing.JPG",
+        "contact": "",
+        "notes": ""
     }
 ]
