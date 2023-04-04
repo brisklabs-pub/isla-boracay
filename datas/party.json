@@ -1,3 +1,9 @@
 [
-    
+    {
+        "name": "OM Bar Boracay",
+        "address": "Station 2, White Beach , Boracay, Philippines",
+        "thumbnail": "./images/party/omboracay.JPG",
+        "contact": "",
+        "notes": ""
+    }
 ]
