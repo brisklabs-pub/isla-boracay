@@ -1,12 +1,5 @@
 [
     {
-        "name": "Epic Boracay",
-        "address": "Beachfront, D'Mall of Boracay",
-        "thumbnail": "./images/resto/epic.jpeg",
-        "contact": "",
-        "notes": ""
-    },
-    {
         "name": "Villa Caemilla",
         "address": "Beachfront, D'Mall of Boracay Boracay",
         "thumbnail": "./images/resto/villa.jpeg",
