@@ -12,6 +12,8 @@ window.onload = (event) => {
   onClick(relax, ()=>{ openTab('relax'); });
   const party = elementBy('party-tab');
   onClick(party, ()=>{ openTab('party');});
+  const directory = elementBy('emergency-tab');
+  onClick(directory, ()=>{ openTab('emergency');});
 
   addData('eat');
   addData('fun');

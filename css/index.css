@@ -97,9 +97,7 @@ section {
 /* Style the tab */
 .main-tab {
    overflow: hidden;
-   padding: 10px;
-   margin-bottom: 0px;
-   padding-bottom: 0px;
+   padding: 10px 5px;
    width: 100%;
 }
 
@@ -110,19 +108,18 @@ section {
    border: none;
    outline: none;
    cursor: pointer;
-   padding: 14px 16px;
+   padding: 10px 10px;
    transition: 0.3s;
    margin-right: 5px;
    color: #555;
+   font-weight: 500;
 }
 
 .main-tab button.active {
    background-color: white;
    color: var(--text-color);
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   border-top-left-radius: 10px;
-   border-top-right-radius: 10px;
-
+   border-radius: 10px;
 }
 
 /* Change background color of buttons on hover */
@@ -132,7 +129,7 @@ section {
 
 /* Style the tab content */
 .main-tab-content {
-   margin-top: 0;
+   margin-top: 5px;
    background-color: white;
    display: none;
    border-top: none;
@@ -204,6 +201,40 @@ section {
    color: rgb(255, 255, 255);
    text-shadow: 1px 1px 1px rgba(0, 0, 0, .25), 2px 2px 1px rgba(0, 0, 0, .25) !important;
 }
+
+/* Table */
+.table-container {
+   width: 100%;
+   margin: 0 auto;
+   overflow-x:auto;
+ }
+ table {
+   border-collapse: collapse;
+   width: 100%;
+   margin-bottom: 20px;
+   font-size: 12px;
+}
+
+th, td {
+   text-align: left;
+   padding: 8px;
+   border: 1px solid #ddd;
+   font-weight: 300;
+}
+
+th {
+   background-color: #f2f2f2;
+   font-weight: bold;
+}
+
+tr:hover {
+   background-color: #f5f5f5;
+}
+td:last-child {
+   font-weight: bold;
+}
+
+tr:nth-child(odd){background-color: #f2f2f2}
 
 
 /* Tablet */
