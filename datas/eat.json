@@ -1,5 +1,12 @@
 [
     {
+        "name": "Don Rite Boracay",
+        "address": "Annex Boracay Holiday Resort, St. 2, Main Road",
+        "thumbnail": "./images/resto/don-rite.JPG",
+        "contact": "0908-888-6059",
+        "notes": ""
+    },
+    {
         "name": "Villa Caemilla",
         "address": "Beachfront, D'Mall of Boracay Boracay",
         "thumbnail": "./images/resto/villa.jpeg",
