@@ -12,6 +12,8 @@ window.onload = (event) => {
   onClick(relax, ()=>{ openTab('relax'); });
   const party = elementBy('party-tab');
   onClick(party, ()=>{ openTab('party');});
+  const shop = elementBy('shop-tab');
+  onClick(shop, ()=>{ openTab('shop');});
   const directory = elementBy('emergency-tab');
   onClick(directory, ()=>{ openTab('emergency');});
 
@@ -20,6 +22,7 @@ window.onload = (event) => {
   addData('stay');
   addData('relax');
   addData('party');
+  addData('shop');
 };
 
 function addData(type) {
