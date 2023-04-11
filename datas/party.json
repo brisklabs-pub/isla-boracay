@@ -1,5 +1,12 @@
 [
     {
+        "name": "Kasbar Boracay",
+        "address": "Station 1, Malay, Philippines",
+        "thumbnail": "./images/resto/kasbar.jpeg",
+        "contact": "0917 387 2241",
+        "notes": "Kasbar, a Boracay institution of more than a decade. Authentic Moroccan delights"
+    },
+    {
         "name": "OM Bar Boracay",
         "address": "Station 2, White Beach , Boracay, Philippines",
         "thumbnail": "./images/party/omboracay.JPG",

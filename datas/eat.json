@@ -1,16 +1,23 @@
 [
     {
+        "name": "Tacio's Boracay",
+        "address": "Seabird Resort Boracay, Station 2, Boracay, Philippines",
+        "thumbnail": "./images/resto/tacio-boracay.jpg",
+        "contact": "0956 543 5447",
+        "notes": ""
+    },
+    {
+        "name": "Lemoni Cafe & Restaurant",
+        "address": "D mall D Boracay island, Boracay island, Malay, Philippines",
+        "thumbnail": "./images/resto/lemonicafe.jpeg",
+        "contact": "",
+        "notes": ""
+    },
+    {
         "name": "Don Rite Boracay",
         "address": "Annex Boracay Holiday Resort, St. 2, Main Road",
         "thumbnail": "./images/resto/don-rite.JPG",
         "contact": "0908-888-6059",
-        "notes": ""
-    },
-    {
-        "name": "Villa Caemilla",
-        "address": "Beachfront, D'Mall of Boracay Boracay",
-        "thumbnail": "./images/resto/villa.jpeg",
-        "contact": "",
         "notes": ""
     },
     {
