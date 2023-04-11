@@ -309,3 +309,24 @@ footer li:hover {
    cursor: pointer;
    text-decoration: underline;
 }
+
+.banner-container a {
+   padding-top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 50vh; /* This will center the image vertically */
+}
+
+.responsive-img {
+   width: 80%;
+   height: auto;
+   align-self: center;
+   opacity: 1;
+}
+
+.responsive-img:hover {
+   cursor: pointer;
+   width: 78%;
+   height: auto;
+}
