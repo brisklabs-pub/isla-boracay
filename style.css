@@ -1,0 +1,85 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style the hero section */
+  .hero {
+    background-image: url(https://via.placeholder.com/1600x800);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 0;
+    color: #fff;
+    font-size: 36px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .hero a {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style the menu */
+  .menu {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .menu ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Style the content section */
+  .content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+  
+  .left-section {
+    flex-basis: 50%;
+  }
+  
+  .right-section img {
+    max-width: 100%;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin-bottom: 20px
+}
