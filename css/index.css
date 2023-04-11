@@ -319,7 +319,7 @@ footer li:hover {
 }
 
 .responsive-img {
-   width: 80%;
+   width: 100%;
    height: auto;
    align-self: center;
    opacity: 1;
@@ -327,6 +327,10 @@ footer li:hover {
 
 .responsive-img:hover {
    cursor: pointer;
-   width: 78%;
+   width: 98%;
    height: auto;
+}
+
+.weatherwidget-io {
+   align-self: center;
 }
