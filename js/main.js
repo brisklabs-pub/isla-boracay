@@ -46,7 +46,7 @@ function cardView(item) {
   card.innerHTML = `
   <div class="card" style="background-image: url(${item.thumbnail});">
     <div class="card__content">
-      <h3 class="text">${item.name}</h3>
+      <h1 class="text">${item.name}</h1>
         <p>${item.address}</p>
     </div>
   </div>`;
