@@ -156,6 +156,10 @@ section {
    margin-bottom: 10px;
 }
 
+.card-section p {
+   font-size: medium;
+}
+
 /* Float four columns side by side */
 .column {
    float: left;
@@ -191,11 +195,6 @@ section {
    min-height: 250px;
 }
 
-.card h3 {
-   margin-bottom: 5px;
-   font-size: large;
-}
-
 .card .card__content {
    position: absolute;
    bottom: 0;
@@ -214,7 +213,7 @@ section {
 }
 
 .card__content p {
-   font-size: medium;
+   font-size: small;
 }
 
 /* Table */
