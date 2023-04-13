@@ -106,24 +106,26 @@ section {
 
 /* Style the buttons that are used to open the tab content */
 .main-tab button {
-   font-size: 18px;
-   background-color: inherit;
-   border: none;
+   font-size: 14px;
+   background-color: white;
    outline: none;
    cursor: pointer;
-   padding: 10px 15px;
+   padding: 8px 10px;
    transition: 0.3s;
-   margin-right: 5px;
+   margin: 5px;
    color: var(--text-color);
    font-weight: 500;
+   border-width: 1px;
    border-radius: 10px;
+   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .main-tab button.active {
    background-color: var(--backgound-color-dark);
    color: white;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
    border-radius: 10px;
+   border: 0.1;
+   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Change background color of buttons on hover */
