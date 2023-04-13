@@ -152,6 +152,7 @@ section {
 
 .card-section h2 {
    font-size: large;
+   font-weight: bold;
    margin-top: 5px;
    margin-bottom: 10px;
 }
@@ -193,6 +194,11 @@ section {
    background-size: cover;
    background-position: center center;
    min-height: 250px;
+}
+
+.card:hover {
+   cursor: pointer;
+   transform: scale(1.02);
 }
 
 .card .card__content {
@@ -341,8 +347,7 @@ footer li:hover {
 
 .responsive-img:hover {
    cursor: pointer;
-   width: 98%;
-   height: auto;
+   transform: scale(1.02);
 }
 
 .weatherwidget-io {
