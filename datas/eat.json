@@ -1,5 +1,13 @@
 [
     {
+        "name": "La Bettola Boracay",
+        "address": "Road 1-A Bulabog Boracay Island, Malay, Philippines",
+        "thumbnail": "./images/resto/la-bettola-boracay.jpeg",
+        "contact": "0956 229 4968",
+        "email": "mrdlabettola@gmail.com",
+        "notes": ""
+    },
+    {
         "name": "Tacio's Boracay",
         "address": "Seabird Resort Boracay, Station 2, Boracay, Philippines",
         "thumbnail": "./images/resto/tacio-boracay.jpg",
