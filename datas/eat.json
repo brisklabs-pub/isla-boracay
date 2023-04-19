@@ -1,5 +1,13 @@
 [
     {
+        "name": "Cafe maruja",
+        "address": "Station 3 Beach Front | Casa Pilar Beach Resort",
+        "thumbnail": "./images/resto/cafe-maruja.jpeg",
+        "contact": "0926 084 4793",
+        "email": "boracay@cafemaruja.com",
+        "notes": ""
+    },
+    {
         "name": "La Bettola Boracay",
         "address": "Road 1-A Bulabog Boracay Island, Malay, Philippines",
         "thumbnail": "./images/resto/la-bettola-boracay.jpeg",
