@@ -1,5 +1,13 @@
 [
     {
+        "name": "Cafe Del Sol",
+        "address": "D’Mall Beachfront, Boracay",
+        "thumbnail": "./images/resto/cafe-del-sol.jpeg",
+        "contact": "288-6223",
+        "email": "",
+        "notes": "Boracay’s first modern, full-service coffee shop"
+    },
+    {
         "name": "Cafe maruja",
         "address": "Station 3 Beach Front | Casa Pilar Beach Resort",
         "thumbnail": "./images/resto/cafe-maruja.jpeg",
@@ -34,13 +42,6 @@
         "address": "Annex Boracay Holiday Resort, St. 2, Main Road",
         "thumbnail": "./images/resto/don-rite.JPG",
         "contact": "0908-888-6059",
-        "notes": ""
-    },
-    {
-        "name": "Jonahs Fruit Shake",
-        "address": "Station 1, Malay, Philippines",
-        "thumbnail": "./images/resto/jonah.jpeg",
-        "contact": "",
         "notes": ""
     }
 ]
