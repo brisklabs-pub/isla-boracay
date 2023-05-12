@@ -1,133 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Email Subscription Popup</title>
-    <style>
-      /* Popup styles */
-      .popup {
-        position: fixed;
-        bottom: 10px;
-        right: 0;
-        width: 100%;
-        background-color: green;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        padding: 20px;
-        border-radius: 10px;
-        z-index: 9999;
-        display: none;
-      }
-
-      .popup h2 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        text-align: center;
-      }
-
-      .popup input[type="email"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        border: none;
-        box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
-        font-size: 1.2rem;
-      }
-
-      .popup button {
-        background-color: #0f7ef1;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        cursor: pointer;
-      }
-
-      .close {
-        font-size: 21px;
-    float: right;
-    cursor: pointer;
-    top: 16px;
-    z-index: 10;
-    border-radius: 12px;
-    line-height: .75;
-    padding: 7px;
-    position: relative;
-}
-
-      /* Hide close button on small screens */
-      @media screen and (max-width: 500px) {
-        .popup .close {
-          display: none;
-        }
-      }
-
-      .inline-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-  }
-  .inline-form label {
-    margin-right: 0.5rem;
-    font-weight: bold;
-    font-size: 1rem;
-    color: #333;
-  }
-  .inline-form input[type="email"] {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    color: #333;
-    width: 15rem;
-  }
-  .inline-form button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 0.5rem;
-    font-size: 1rem;
-    margin-left: 0.5rem;
-  }
-  .inline-form button[type="submit"]:hover {
-    background-color: #3e8e41;
-  }
-    </style>
-  </head>
-  <body>
-    <!-- Popup HTML -->
-    <div class="popup" id="popup">
-      
-      <form action="#" method="post" class="inline-form">
-        <label for="email">Get notified of latest boracay job post</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-
-
-      <button class="close" onclick="closePopup()">Close</button>
-    </div>
-
-
-
-    <!-- Anchor HTML -->
-    <a href="#" onclick="openPopup(); return false;">Subscribe</a>
-
-    <!-- Script -->
-    <script>
-      // Open popup function
-      function openPopup() {
-        document.getElementById("popup").style.display = "block";
-      }
-
-      // Close popup function
-      function closePopup() {
-        document.getElementById("popup").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      }
-    </script>
-  </body>
+<head>
+	<title>Full Screen Image with Overlay Text</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: #000;
+		}
+		.full-screen {
+			position: relative;
+			height: 100vh;
+			background-image: url("./images/banners/sunset.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+		.overlay {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: #fff;
+			font-size: 3rem;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="full-screen">
+		<div class="overlay">
+			<p>Your Overlay Text</p>
+      <p>TIME: </p>
+      <p>Your Overlay Text</p>
+		</div>
+	</div>
+</body>
 </html>
