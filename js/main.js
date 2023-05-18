@@ -42,14 +42,15 @@ function addData(type) {
 
 function cardView(item) {
   const card = document.createElement('div');
-  card.setAttribute('class', 'column');
+  card.setAttribute('class', 'card');
+  card.setAttribute('style', `background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
   card.innerHTML = `
-  <div class="card" style="background-image: url(${item.thumbnail});">
-    <div class="card__content">
-      <h1 class="text">${item.name}</h1>
-        <p>${item.address}</p>
+    <div class ="card_item_content">
+    <h3 class="card-title">${item.name}</h3>
+    <p class="card-content">${item.address}</p>
+    <button class="card-btn">VISIT</button>
     </div>
-  </div>`;
+    </div>`;
   return card;
 }
 
@@ -58,13 +59,13 @@ function openTab(page) {
   var i, tabcontent, tablinks;
 
   // Get all elements with class="main-tab-content " and hide them
-  tabcontent = document.getElementsByClassName("main-tab-content");
+  tabcontent = document.getElementsByClassName("tab-content");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
   // Get all elements with class="main-tab-link" and remove the class "active"
-  tablinks = document.getElementsByClassName("main-tab-links");
+  tablinks = document.getElementsByClassName("tab-links");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
