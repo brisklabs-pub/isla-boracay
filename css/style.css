@@ -149,7 +149,7 @@ button {
 }
 
 .section-title:after {
-    content: url(../images/wave-blue.svg);
+    content: url(../images/components/wave-blue.svg);
     display: block;
     width: 70px;
     margin: 0 auto;
@@ -321,7 +321,7 @@ section.main {
 }
 
 .slider-content h3:after {
-    content: url('../images/wave-blue.svg');
+    content: url('../images/components/wave-blue.svg');
     display: block;
     width: 70px;
     margin: 0 auto;
@@ -431,7 +431,7 @@ video.video-bg {
 }
 
 .scroll-down:before {
-    content: url('../images/scroll-shape.svg');
+    content: url('../images/components/scroll-shape.svg');
     width: 100px;
     height: 49px;
     display: block;
@@ -937,7 +937,7 @@ section#partners {
 -------------------------------------- */
 
 footer#main-footer {
-    background: url(../images/footer-bg.png) no-repeat #267d9d;
+    background: url(../images/components/footer-bg.png) no-repeat #267d9d;
     background-position: bottom center;
     background-size: cover;
     color: #f6f8f8;
@@ -947,7 +947,7 @@ footer#main-footer {
 
 footer#main-footer:before {
     content: '';
-    background: url(../images/wave-top-footer.svg) no-repeat;
+    background: url(../images/components/wave-top-footer.svg) no-repeat;
     background-position: bottom;
     background-size: cover;
     display: block;
