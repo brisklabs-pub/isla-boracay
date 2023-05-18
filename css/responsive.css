@@ -74,9 +74,9 @@ Author URI: gnodesign.com
         display: none;
     }
     /**************** 
-		Blog Section
+		deals Section
 	****************/
-    .blog-post .blog-desc {
+    .deals-post .deals-desc {
         overflow: hidden;
         padding: 30px;
     }
@@ -220,12 +220,12 @@ Author URI: gnodesign.com
         right: auto;
     }
     /**************** 
-		Blog Detail Page
+		deals Detail Page
 	****************/
-    section#blog-post ul.social li {
+    section#deals-post ul.social li {
         margin-bottom: 20px;
     }
-    section#blog-post .post-quote blockquote {
+    section#deals-post .post-quote blockquote {
         padding: 90px 0;
     }
 }
@@ -314,9 +314,9 @@ Author URI: gnodesign.com
         width: 100%;
     }
     /**************** 
-		Blog Section
+		deals Section
 	****************/
-    article.blog-post {
+    article.deals-post {
         padding: 25px;
     }
 }
@@ -360,14 +360,14 @@ Author URI: gnodesign.com
         display: none;
     }
     /**************** 
-		Blog Section
+		deals Section
 	****************/
-    .blog-post .blog-desc {
+    .deals-post .deals-desc {
         overflow: hidden;
         padding: 30px 0;
     }
     /**************** 
-		Blog Detail Page
+		deals Detail Page
 	****************/
     form#comment-form .comment-require {
         text-align: center;

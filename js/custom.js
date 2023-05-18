@@ -162,8 +162,6 @@ Author URI: gnodesign.com
         shuffleme.init(); //filter portfolio
 
 
-
-
         /*----------------------------------------------------
           MAGNIFIC POP UP
         ----------------------------------------------------*/
@@ -199,47 +197,44 @@ Author URI: gnodesign.com
             });
         });
 
-        $('.popup-video').magnificPopup({
-            type: 'iframe',
-            mainClass: 'mfp-fade',
+        // $('.popup-video').magnificPopup({
+        //     type: 'iframe',
+        //     mainClass: 'mfp-fade',
 
-            iframe: {
-                markup: '<div class="mfp-iframe-scaler">' +
-                    '<div class="mfp-close"></div>' +
-                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                    '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+        //     iframe: {
+        //         markup: '<div class="mfp-iframe-scaler">' +
+        //             '<div class="mfp-close"></div>' +
+        //             '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+        //             '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
 
-                patterns: {
-                    youtube: {
-                        index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+        //         patterns: {
+        //             youtube: {
+        //                 index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
 
-                        id: 'v=', // String that splits URL in a two parts, second part should be %id%
-                        // Or null - full URL will be returned
-                        // Or a function that should return %id%, for example:
-                        // id: function(url) { return 'parsed id'; }
+        //                 id: 'v=', // String that splits URL in a two parts, second part should be %id%
+        //                 // Or null - full URL will be returned
+        //                 // Or a function that should return %id%, for example:
+        //                 // id: function(url) { return 'parsed id'; }
 
-                        src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
-                    },
-                    vimeo: {
-                        index: 'vimeo.com/',
-                        id: '/',
-                        src: '//player.vimeo.com/video/%id%?autoplay=1'
-                    },
-                    gmaps: {
-                        index: '//maps.google.',
-                        src: '%id%&output=embed'
-                    }
+        //                 src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+        //             },
+        //             vimeo: {
+        //                 index: 'vimeo.com/',
+        //                 id: '/',
+        //                 src: '//player.vimeo.com/video/%id%?autoplay=1'
+        //             },
+        //             gmaps: {
+        //                 index: '//maps.google.',
+        //                 src: '%id%&output=embed'
+        //             }
 
-                    // you may add here more sources
+        //             // you may add here more sources
 
-                },
+        //         },
 
-                srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
-            }
-        });
-
-
-
+        //         srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+        //     }
+        // });
 
 
         /*----------------------------------------------------
@@ -277,14 +272,14 @@ Author URI: gnodesign.com
         });
 
         /*----------------------------------------------------
-          LOAD MORE BLOG POSTS
+          LOAD MORE deals POSTS
         ----------------------------------------------------*/
         $(function () {
-            $("article.blog-listing").slice(0, 4).show();
+            $("article.deals-listing").slice(0, 3).show();
             $("#loadMore").on('click', function (e) {
                 e.preventDefault();
-                $("article.blog-listing:hidden").slice(0, 2).slideDown(400);
-                if ($("article.blog-listing:hidden").length == 0) {
+                $("article.deals-listing:hidden").slice(0, 2).slideDown(400);
+                if ($("article.deals-listing:hidden").length == 0) {
                     $('#loadmsg').html('<div class="alert alert-success">No more posts to load.</div>').fadeIn(700);
                     $("#loadMore").fadeOut(600);
                 }

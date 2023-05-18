@@ -11,32 +11,6 @@ Author URI: gnodesign.com
 ***************************/
 
 /* https://gnodesign.com/templates/swimmerland/#0 */
-/*------------------------------------------------------------------
-[Table of contents]
-
-1.  Default Typography
-2.  General Styles
-3.  Buttons
-4.  Header
-5.  Home Page
-    5.1 Main Section - Slider
-    5.2 About Us Section
-    5.3 Gallery Section
-    5.4 Training Courses Section
-    5.6 Blog Section
-    5.10 Latest Event Section
-    5.11 Partners Section
-6. Footer
-7. Pages
-    7.1 About Page
-    7.2 404 Page
-    7.3 Coming Soon Page
-8. Blog
-    8.1 Blog Listing
-    8.2 Blog Detail
-9. Contact Us
--------------------------------------------------------------------*/
-
 
 /* --------------------------------------
     1. Default Typography
@@ -420,48 +394,6 @@ video.video-bg {
 }
 
 
-/* ---- Scroll Down ---- */
-
-.scroll-down {
-    position: absolute;
-    bottom: 0;
-    z-index: 20;
-    width: 100%;
-    text-align: center;
-}
-
-.scroll-down:before {
-    content: url('../images/components/scroll-shape.svg');
-    width: 100px;
-    height: 49px;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: -1;
-}
-
-.scroll-down a {
-    font-size: 30px;
-    cursor: pointer;
-    color: #323232;
-}
-
-.scroll-down a:hover {
-    color: #3cbeee;
-    font-size: 34px;
-}
-
-
-/* Demos */
-
-#index-image.fullscreen {
-    background: url(../images/img/slider-bg.jpg) no-repeat;
-    background-size: cover;
-}
-
 /**************** 5.3 Gallery Section ****************/
 section#gallery {
     background: #ededed;
@@ -572,15 +504,59 @@ ul#grid.gallery-items li.shuffle-item:hover a:after {
 }
 
 
+/**************** 5.9 Signup Section ****************/
 
-/**************** 5.6 Blog Section ****************/
+section#signup {
+    background: url(../images/img/signup-bg.png) no-repeat #3cbeee;
+    background-position: left;
+    padding: 60px 0;
+    margin-top: 20px;
+}
 
-section#blog {
+section#signup::before {
+    background: url(../images/components/wave-top.svg) no-repeat;
+}
+
+section#signup h3 {
+    font-weight: 100;
+    text-align: left;
+    color: #a6ecff;
+}
+
+section#signup h3 strong {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #f6f8f8;
+}
+
+section#signup .section-title:after {
+    content: url(../images/components/);
+    display: block;
+    width: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+section#signup .col-md-4 {
+    text-align: center;
+}
+
+section#signup .btn {
+    color: #3cbeee;
+    background: #f6f8f8;
+    padding: 10px 35px;
+    margin-top: 25px;
+}
+
+
+/**************** 5.6 Deals Section ****************/
+
+section#deals {
     background: #ededed;
     margin-top: -40px;
 }
 
-article.blog-post {
+article.deals-post {
     background: #f6f8f8;
     padding: 40px;
     border-radius: 20px;
@@ -588,13 +564,13 @@ article.blog-post {
     margin-bottom: 80px;
 }
 
-article.blog-post .blog-thumbnail {
+article.deals-post .deals-thumbnail {
     padding: 0;
     background: #3cbeee;
     overflow: hidden;
 }
 
-article.blog-post .blog-thumbnail a:after {
+article.deals-post .deals-thumbnail a:after {
     content: '\f0c1';
     font-family: 'fontawesome';
     color: #f6f8f8;
@@ -615,12 +591,12 @@ article.blog-post .blog-thumbnail a:after {
     transition: all .7s ease;
 }
 
-article.blog-post .blog-thumbnail:hover a:after {
+article.deals-post .deals-thumbnail:hover a:after {
     left: 50%;
     opacity: 1;
 }
 
-.blog-thumbnail img {
+.deals-thumbnail img {
     max-height: 300px;
     object-fit: cover;
     height: 260px;
@@ -632,12 +608,12 @@ article.blog-post .blog-thumbnail:hover a:after {
     transition: all .5s ease;
 }
 
-article.blog-post .blog-thumbnail:hover img {
+article.deals-post .deals-thumbnail:hover img {
     transform: scale(1.2);
     opacity: .5;
 }
 
-article.blog-post .date {
+article.deals-post .date {
     background: #3cbeee;
     display: block;
     position: absolute;
@@ -655,32 +631,32 @@ article.blog-post .date {
     transition: all .5s ease;
 }
 
-article.blog-post .blog-thumbnail:hover .date {
+article.deals-post .deals-thumbnail:hover .date {
     opacity: 0;
 }
 
-.blog-post .date span.day,
-.blog-post .date span.publish-month {
+.deals-post .date span.day,
+.deals-post .date span.publish-month {
     font-family: 'Montserrat', sans-serif;
 }
 
-.blog-post .date span.day {
+.deals-post .date span.day {
     display: block;
     font-size: 24px;
     font-weight: 700;
 }
 
-.blog-post .date span.publish-month {
+.deals-post .date span.publish-month {
     font-size: 14px;
     text-transform: uppercase;
 }
 
-.blog-post .blog-desc {
+.deals-post .deals-desc {
     padding: 0 0 0 50px;
     color: #999;
 }
 
-.blog-post .blog-desc h4 a {
+.deals-post .deals-desc h4 a {
     color: #323232;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
@@ -688,7 +664,7 @@ article.blog-post .blog-thumbnail:hover .date {
     cursor: pointer;
 }
 
-.blog-post .blog-desc h4 a:hover {
+.deals-post .deals-desc h4 a:hover {
     color: #3cbeee;
 }
 
@@ -710,11 +686,11 @@ article.blog-post .blog-thumbnail:hover .date {
     padding-right: 5px;
 }
 
-.blog-post .blog-desc a.btn {
+.deals-post .deals-desc a.btn {
     margin-top: 30px;
 }
 
-section#blog .text-center {
+section#deals .text-center {
     margin: 0 0 90px 0;
 }
 
@@ -904,7 +880,14 @@ section#events .event-details .btn {
 
 section#partners {
     background: #f6f8f8;
-    margin-top: -40px;
+    margin-top: 0px;
+}
+
+#partners .companies {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #partners .owl-item {
@@ -965,11 +948,6 @@ footer .footer-top {
     padding: 80px 0 50px 0;
 }
 
-footer .footer-top img {
-    height: 26px;
-    margin-bottom: 30px;
-}
-
 footer .footer-top ul {
     list-style: none;
     margin: 0;
@@ -1012,34 +990,8 @@ footer .footer-top .footer-links li a:hover {
     color: #3cbeee;
 }
 
-footer form .form-group {
-    margin-top: 30px;
-}
-
-footer form .input-group {
-    width: 100%;
-}
-
-footer form input.form-control {
-    height: 40px;
-    border: 0;
-    border-radius: 20px;
-    padding: 0 0 0 30px;
-    width: 90% !important;
-    opacity: .3;
-    z-index: 0 !important;
-}
-
-footer .btn {
-    position: absolute;
-    right: 0;
-    background: #f69504;
-    border: 0;
-    box-shadow: none;
-}
-
-footer .btn:hover {
-    background: #3cbeee;
+footer .footer-top .footer-social i {
+    padding-right: 20px;
 }
 
 
@@ -1200,13 +1152,13 @@ footer .copyright p {
 }
 
 /* --------------------------------------
-    8. Blog
+    8. deals
 -------------------------------------- */
 
 
-/**************** 8.1 Blog Listing ****************/
+/**************** 8.1 deals Listing ****************/
 
-article.blog-listing {
+article.deals-listing {
     display: none;
 }
 
@@ -1215,32 +1167,32 @@ a#loadMore:focus {
 }
 
 
-/**************** 8.2 Blog Detail ****************/
+/**************** 8.2 deals Detail ****************/
 
-section#blog-post .container {
+section#deals-post .container {
     padding-left: 0;
     padding-right: 0;
 }
 
-section#blog-post .post-title {
+section#deals-post .post-title {
     margin-bottom: 10px;
 }
 
-section#blog-post h2 {
+section#deals-post h2 {
     text-transform: uppercase;
 }
 
-section#blog-post h4 {
+section#deals-post h4 {
     text-transform: uppercase;
     padding-bottom: 20px;
 }
 
-section#blog-post p {
+section#deals-post p {
     font-size: 16px;
     line-height: 26px;
 }
 
-section#blog-post .post-img {
+section#deals-post .post-img {
     padding: 0;
     border-radius: 30px;
     height: 300px;
@@ -1248,14 +1200,14 @@ section#blog-post .post-img {
     box-shadow: 5.5px 9px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
-section#blog-post .post-img img {
+section#deals-post .post-img img {
     border-radius: 30px;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-section#blog-post .post-quote {
+section#deals-post .post-quote {
     background: #3cbeee;
     color: #f6f8f8;
     border-radius: 30px;
@@ -1263,7 +1215,7 @@ section#blog-post .post-quote {
     margin: 40px 0;
 }
 
-section#blog-post .post-quote blockquote {
+section#deals-post .post-quote blockquote {
     margin: 0;
     padding: 55px 0;
     font-style: italic;
@@ -1271,7 +1223,7 @@ section#blog-post .post-quote blockquote {
     border: 0;
 }
 
-section#blog-post .post-quote blockquote:before {
+section#deals-post .post-quote blockquote:before {
     content: '\f10d';
     font-family: 'fontawesome';
     display: inline-block;
@@ -1285,7 +1237,7 @@ section#blog-post .post-quote blockquote:before {
     opacity: .5;
 }
 
-section#blog-post .post-quote blockquote:after {
+section#deals-post .post-quote blockquote:after {
     content: '\f10e';
     font-family: 'fontawesome';
     display: inline-block;
@@ -1299,39 +1251,39 @@ section#blog-post .post-quote blockquote:after {
     opacity: .5;
 }
 
-section#blog-post ul.social {
+section#deals-post ul.social {
     padding: 0;
     margin-top: 40px;
 }
 
-section#blog-post ul.social li {
+section#deals-post ul.social li {
     display: inline-block;
 }
 
-section#blog-post ul.social li .btn {
+section#deals-post ul.social li .btn {
     width: 140px;
     height: 40px;
     font-size: 24px;
     padding: 0;
 }
 
-section#blog-post ul.social li #fb.btn {
+section#deals-post ul.social li #fb.btn {
     background: #2164b6;
 }
 
-section#blog-post ul.social li #twitter.btn {
+section#deals-post ul.social li #twitter.btn {
     background: #43d0fe;
 }
 
-section#blog-post ul.social li #linkedin.btn {
+section#deals-post ul.social li #linkedin.btn {
     background: #2a8fdd;
 }
 
-section#blog-post ul.social li #google.btn {
+section#deals-post ul.social li #google.btn {
     background: #dd4b39;
 }
 
-section#blog-post ul.social li #pinterest.btn {
+section#deals-post ul.social li #pinterest.btn {
     background: #df5643;
 }
 
