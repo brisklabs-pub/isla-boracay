@@ -49,7 +49,7 @@ function cardView(item) {
       <h3 class="card-title">${item.name}</h3>
       <p class="card-text">${item.address}</p>
       <button class="card-btn">
-        <a href=${item.link}>VISIT</a>
+        <a href=${item.link} target="_blank">VISIT</a>
       </button>
     </div>`;
   return card;
