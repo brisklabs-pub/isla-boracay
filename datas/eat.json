@@ -3,8 +3,9 @@
         "name": "Cafe Del Sol",
         "address": "D’Mall Beachfront, Boracay",
         "thumbnail": "./images/explore/resto/cafe-del-sol.jpeg",
-        "contact": "288-6223",
-        "email": "",
+        "contact": "09984828490",
+        "email": "info@cafedelsol.com.ph",
+        "link": "http://www.cafedelsol.com.ph/",
         "notes": "Boracay’s first modern, full-service coffee shop"
     },
     {
@@ -13,6 +14,7 @@
         "thumbnail": "./images/explore/resto/cafe-maruja.jpeg",
         "contact": "0926 084 4793",
         "email": "boracay@cafemaruja.com",
+        "link": "https://www.cafemaruja.com/",
         "notes": ""
     },
     {
@@ -21,6 +23,7 @@
         "thumbnail": "./images/explore/resto/la-bettola-boracay.jpeg",
         "contact": "0956 229 4968",
         "email": "mrdlabettola@gmail.com",
+        "link": "https://web.facebook.com/pages/MrD-La-Bettola-Boracay/102650864581155",
         "notes": ""
     },
     {
@@ -28,13 +31,17 @@
         "address": "Seabird Resort Boracay, Station 2, Boracay, Philippines",
         "thumbnail": "./images/explore/resto/tacio-boracay.jpg",
         "contact": "0956 543 5447",
-        "notes": ""
+        "email": "taciosboracay@gmail.com",
+        "link": "https://web.facebook.com/tacios.bistro.boracay",
+        "notes": "Tacio's of Cubao Expo is now open at Seabird Resort Boracay. Delicious and affordable!"
     },
     {
         "name": "Lemoni Cafe & Restaurant",
         "address": "D mall D Boracay island, Boracay island, Malay, Philippines",
         "thumbnail": "./images/explore/resto/lemonicafe.jpeg",
-        "contact": "",
+        "contact": "0977 857 7155",
+        "email": "lemonicafe@yahoo.com.ph",
+        "link": "https://web.facebook.com/Lemonicafe.Boracay",
         "notes": ""
     },
     {
@@ -42,6 +49,8 @@
         "address": "Annex Boracay Holiday Resort, St. 2, Main Road",
         "thumbnail": "./images/explore/resto/don-rite.JPG",
         "contact": "0908-888-6059",
+        "email": "donriteboracay@yahoo.com",
+        "link": "https://web.facebook.com/donritedeliboracay",
         "notes": ""
     }
 ]
