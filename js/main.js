@@ -45,11 +45,10 @@ function cardView(item) {
   card.setAttribute('class', 'card');
   card.setAttribute('style', `background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
   card.innerHTML = `
-    <div class ="card_item_content">
-    <h3 class="card-title">${item.name}</h3>
-    <p class="card-content">${item.address}</p>
-    <button class="card-btn">VISIT</button>
-    </div>
+    <div class ="card-item">
+      <h3 class="card-title">${item.name}</h3>
+      <p class="card-text">${item.address}</p>
+      <button class="card-btn">VISIT</button>
     </div>`;
   return card;
 }

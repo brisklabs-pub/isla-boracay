@@ -1,15 +1,8 @@
 [
     {
-        "name": "Thata Boracay Activities",
-        "address": "Station 1, Boracay",
-        "thumbnail": "./images/activities/thata_boracay.jpeg",
-        "contact": "",
-        "notes": ""
-    },
-    {
         "name": "Padayon Kitesurfing",
         "address": "Bolabog Beach, Malay, Philippines",
-        "thumbnail": "./images/activities/padayonKitesurfing.JPG",
+        "thumbnail": "./images/explore/activities/padayonKitesurfing.JPG",
         "contact": "",
         "notes": ""
     }

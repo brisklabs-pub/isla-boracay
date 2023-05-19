@@ -2,7 +2,7 @@
     {
         "name": "Cafe Del Sol",
         "address": "D’Mall Beachfront, Boracay",
-        "thumbnail": "./images/resto/cafe-del-sol.jpeg",
+        "thumbnail": "./images/explore/resto/cafe-del-sol.jpeg",
         "contact": "288-6223",
         "email": "",
         "notes": "Boracay’s first modern, full-service coffee shop"
@@ -10,7 +10,7 @@
     {
         "name": "Cafe maruja",
         "address": "Station 3 Beach Front | Casa Pilar Beach Resort",
-        "thumbnail": "./images/resto/cafe-maruja.jpeg",
+        "thumbnail": "./images/explore/resto/cafe-maruja.jpeg",
         "contact": "0926 084 4793",
         "email": "boracay@cafemaruja.com",
         "notes": ""
@@ -18,7 +18,7 @@
     {
         "name": "La Bettola Boracay",
         "address": "Road 1-A Bulabog Boracay Island, Malay, Philippines",
-        "thumbnail": "./images/resto/la-bettola-boracay.jpeg",
+        "thumbnail": "./images/explore/resto/la-bettola-boracay.jpeg",
         "contact": "0956 229 4968",
         "email": "mrdlabettola@gmail.com",
         "notes": ""
@@ -26,21 +26,21 @@
     {
         "name": "Tacio's Boracay",
         "address": "Seabird Resort Boracay, Station 2, Boracay, Philippines",
-        "thumbnail": "./images/resto/tacio-boracay.jpg",
+        "thumbnail": "./images/explore/resto/tacio-boracay.jpg",
         "contact": "0956 543 5447",
         "notes": ""
     },
     {
         "name": "Lemoni Cafe & Restaurant",
         "address": "D mall D Boracay island, Boracay island, Malay, Philippines",
-        "thumbnail": "./images/resto/lemonicafe.jpeg",
+        "thumbnail": "./images/explore/resto/lemonicafe.jpeg",
         "contact": "",
         "notes": ""
     },
     {
         "name": "Don Rite Boracay",
         "address": "Annex Boracay Holiday Resort, St. 2, Main Road",
-        "thumbnail": "./images/resto/don-rite.JPG",
+        "thumbnail": "./images/explore/resto/don-rite.JPG",
         "contact": "0908-888-6059",
         "notes": ""
     }
