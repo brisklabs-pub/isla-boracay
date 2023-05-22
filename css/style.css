@@ -218,10 +218,130 @@ header {
     transition: .6s all ease;
 }
 
+
+
+/* --------------------------------------
+    7. Pages
+-------------------------------------- */
+
+#pages.main {
+    z-index: 0;
+}
+
+#pages.main .page-title {
+    height: 350px;
+}
+
+#pages.main .page-title h2 {
+    color: #f6f8f8;
+    z-index: 4;
+    font-size: 50px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+
+/**************** 7.1 About Page ****************/
+
+section#about .section-title {
+    text-align: left;
+}
+
+section#about .section-title:after {
+    margin: 0;
+}
+
+section#about p {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+section#about .about-vid {
+    height: 450px;
+}
+
+section#about .about-vid .vid-container {
+    background: #2e2e2e;
+    width: 85%;
+    height: 100%;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 5.5px 9px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+section#about .about-vid .vid-container .popup-video:after {
+    content: '\f144';
+    font-family: 'fontawesome';
+    display: block;
+    color: #f6f8f8;
+    font-size: 70px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: .5;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+section#about .about-vid:hover .vid-container .popup-video:after {
+    font-size: 80px;
+    opacity: .9;
+}
+
+section#about .about-vid .vid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+section#about ul.check-list {
+    font-size: 18px;
+    color: #666;
+    padding: 0;
+    margin: 25px 0;
+    list-style: none;
+}
+
+section#about ul.check-list li {
+    padding-bottom: 20px;
+}
+
+section#about ul.check-list li:last-child {
+    padding-bottom: 0;
+}
+
+section#about ul.check-list li:before {
+    content: '\f00c';
+    font-family: 'fontawesome';
+    font-size: 18px;
+    color: #74cc6c;
+    padding-right: 10px;
+}
+
+
 /* --------------------------------------
     5. Home Page
 -------------------------------------- */
-
 
 /**************** 5.1 Main Section - Slider ****************/
 
@@ -1065,6 +1185,7 @@ footer .copyright p {
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .card {
     display: flex;
     overflow: hidden;
@@ -1077,9 +1198,9 @@ footer .copyright p {
     color: #f6f8f8;
     margin: 15px;
     box-shadow: 5.5px 9px 15px 0px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card-item {
+}
+
+.card-item {
     position: relative;
     width: 100%;
     height: auto;
@@ -1088,28 +1209,28 @@ footer .copyright p {
     border-bottom-right-radius: 10px;
     color: #f6f8f8;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .25), 2px 2px 1px rgba(0, 0, 0, .25) !important;
-  }
-  
-  .card-item {
+}
+
+.card-item {
     padding: 10px;
     margin-top: 120px;
-  }
-  
-  .card-title {
+}
+
+.card-title {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 1.2px;
     color: #f6f8f8;
-  }
-  
-  .card-text {
+}
+
+.card-text {
     font-size: 14px;
     letter-spacing: 0.5px;
     line-height: 1.5;
     color: #f6f8f8;
-  }
-  
-  .card-btn {
+}
+
+.card-btn {
     all: unset;
     display: inline-block;
     margin-top: auto;
@@ -1123,17 +1244,50 @@ footer .copyright p {
     cursor: pointer;
     letter-spacing: 1.2px;
     float: right;
-  }
+}
 
-  .card-btn a {
+.card-btn a {
     color: #f6f8f8;
-  }
-  
-  .card-btn:hover {
+}
+
+.card-btn:hover {
     color: #f6f8f8;
     background: #3cbeee;
-    border: 0px solid #3cbeee;;
-  }
+    border: 0px solid #3cbeee;
+}
+
+.card-solid-btn {
+    all: unset;
+    display: inline-block;
+    margin-top: auto;
+    margin-right: 10px;
+    color: #f6f8f8;
+    background: #3cbeee;
+    border: 0px solid #3cbeee;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.5s;
+    cursor: pointer;
+    letter-spacing: 1.2px;
+    float: right;
+}
+
+.card-solid-btn a {
+    color: #f6f8f8;
+}
+
+.card-solid-btn:hover {
+    color: #f6f8f8;
+    background: #3cbeee;
+    border: 0px solid #3cbeee;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
 
 /* --------------------------------------
     8. deals
@@ -1148,183 +1302,4 @@ article.deals-listing {
 
 a#loadMore:focus {
     color: #999;
-}
-
-
-/**************** 8.2 deals Detail ****************/
-
-section#deals-post .container {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-section#deals-post .post-title {
-    margin-bottom: 10px;
-}
-
-section#deals-post h2 {
-    text-transform: uppercase;
-}
-
-section#deals-post h4 {
-    text-transform: uppercase;
-    padding-bottom: 20px;
-}
-
-section#deals-post p {
-    font-size: 16px;
-    line-height: 26px;
-}
-
-section#deals-post .post-img {
-    padding: 0;
-    border-radius: 30px;
-    height: 300px;
-    margin: 40px 0;
-    box-shadow: 5.5px 9px 15px 0px rgba(0, 0, 0, 0.2);
-}
-
-section#deals-post .post-img img {
-    border-radius: 30px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-section#deals-post .post-quote {
-    background: #3cbeee;
-    color: #f6f8f8;
-    border-radius: 30px;
-    text-align: center;
-    margin: 40px 0;
-}
-
-section#deals-post .post-quote blockquote {
-    margin: 0;
-    padding: 55px 0;
-    font-style: italic;
-    font-size: 24px;
-    border: 0;
-}
-
-section#deals-post .post-quote blockquote:before {
-    content: '\f10d';
-    font-family: 'fontawesome';
-    display: inline-block;
-    float: left;
-    color: #f6f8f8;
-    font-size: 72px;
-    position: absolute;
-    left: 30px;
-    top: 0;
-    font-style: normal;
-    opacity: .5;
-}
-
-section#deals-post .post-quote blockquote:after {
-    content: '\f10e';
-    font-family: 'fontawesome';
-    display: inline-block;
-    float: right;
-    color: #f6f8f8;
-    font-size: 72px;
-    position: relative;
-    right: 30px;
-    top: 0;
-    font-style: normal;
-    opacity: .5;
-}
-
-section#deals-post ul.social {
-    padding: 0;
-    margin-top: 40px;
-}
-
-section#deals-post ul.social li {
-    display: inline-block;
-}
-
-section#deals-post ul.social li .btn {
-    width: 140px;
-    height: 40px;
-    font-size: 24px;
-    padding: 0;
-}
-
-section#deals-post ul.social li #fb.btn {
-    background: #2164b6;
-}
-
-section#deals-post ul.social li #twitter.btn {
-    background: #43d0fe;
-}
-
-section#deals-post ul.social li #linkedin.btn {
-    background: #2a8fdd;
-}
-
-section#deals-post ul.social li #google.btn {
-    background: #dd4b39;
-}
-
-section#deals-post ul.social li #pinterest.btn {
-    background: #df5643;
-}
-
-
-
-
-/* --------------------------------------
-    x. Animations
--------------------------------------- */
-
-
-/* Menu Animation */
-
-@-webkit-keyframes mymenu-open {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes mymenu-open {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@-o-keyframes mymenu-open {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-@keyframes mymenu-open {
-    0% {
-        transform: translateY(-30px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
 }

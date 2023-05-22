@@ -1,21 +1,21 @@
 const baseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/';
 window.onload = (event) => {
   // Standing
-  openTab('eat');
+  openExploreTab('eat');
   const eat = elementBy('eat-tab');
-  onClick(eat, ()=>{ openTab('eat'); });
+  onClick(eat, ()=>{ openExploreTab('eat'); });
   const fun = elementBy('fun-tab');
-  onClick(fun, ()=>{ openTab('fun'); });
+  onClick(fun, ()=>{ openExploreTab('fun'); });
   const stay = elementBy('stay-tab');
-  onClick(stay, ()=>{ openTab('stay'); });
+  onClick(stay, ()=>{ openExploreTab('stay'); });
   const relax = elementBy('relax-tab');
-  onClick(relax, ()=>{ openTab('relax'); });
+  onClick(relax, ()=>{ openExploreTab('relax'); });
   const party = elementBy('party-tab');
-  onClick(party, ()=>{ openTab('party');});
+  onClick(party, ()=>{ openExploreTab('party');});
   const shop = elementBy('shop-tab');
-  onClick(shop, ()=>{ openTab('shop');});
+  onClick(shop, ()=>{ openExploreTab('shop');});
   const directory = elementBy('emergency-tab');
-  onClick(directory, ()=>{ openTab('emergency');});
+  onClick(directory, ()=>{ openExploreTab('emergency');});
 
   addData('eat');
   addData('fun');
@@ -23,6 +23,13 @@ window.onload = (event) => {
   addData('relax');
   addData('party');
   addData('shop');
+
+  // DEALS
+  openDealTab('relax-deal');
+  const activities_deal = elementBy('activities-deal-tab');
+  onClick(activities_deal, ()=>{ openDealTab('activities-deal');});
+  const relax_deal = elementBy('relax-deal-tab');
+  onClick(relax_deal, ()=>{ openDealTab('relax-deal');});
 };
 
 function addData(type) {
@@ -55,18 +62,41 @@ function cardView(item) {
   return card;
 }
 
-function openTab(page) {
+function openExploreTab(page) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
   // Get all elements with class="main-tab-content " and hide them
-  tabcontent = document.getElementsByClassName("tab-content");
+  tabcontent = document.getElementsByClassName("explore-tab-content");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
   // Get all elements with class="main-tab-link" and remove the class "active"
-  tablinks = document.getElementsByClassName("tab-links");
+  tablinks = document.getElementsByClassName("explore-tab-links");
+  console.log( tablinks)
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  var selected = elementBy(page);
+  selected.style.display = "block";
+  var tab = elementBy(page + "-tab");
+  tab.className += " active";
+}
+
+function openDealTab(page) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="main-tab-content " and hide them
+  tabcontent = document.getElementsByClassName("deal-tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="main-tab-link" and remove the class "active"
+  tablinks = document.getElementsByClassName("deal-tab-links");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
