@@ -81,6 +81,9 @@ function addExploreData(type) {
       for (index in json) {
         const item = json[index];
         const row = exploreCardView(item);
+        onClick(row, ()=>{
+          openItem(item.name);
+        });
         tab.appendChild(row);
       }
     }
@@ -91,16 +94,40 @@ function addExploreData(type) {
 function exploreCardView(item) {
   const card = document.createElement('div');
   card.setAttribute('class', 'card');
+  card.setAttribute('id', item.name);
   card.setAttribute('style', `background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
   card.innerHTML = `
     <div class ="card-item">
       <h3 class="card-title">${item.name}</h3>
       <p class="card-text">${item.address}</p>
-      <button class="card-btn">
-        <a href=${item.link} target="_blank">VISIT</a>
-      </button>
+      <div class="card-more">
+        <p class="card-text">${item.notes}</p>
+        <button class="card-btn">
+          <a href=${item.link} target="_blank">VISIT</a>
+        </button>
+        <button class="card-btn">
+          <a href=${item.link} target="_blank">DIRECTION</a>
+        </button>
+      </div>
     </div>`;
   return card;
+}
+
+function openItem(elementName) {
+  var cards = document.getElementsByClassName("card-item");
+  for (i = 0; i < cards.length; i++) {
+    cards[i].className = cards[i].className.replace(" clicked", "");
+  }
+  var subInfos = document.getElementsByClassName("card-more");
+  for (i = 0; i < subInfos.length; i++) {
+    subInfos[i].className = subInfos[i].className.replace(" clicked", "");
+  }
+  
+  var currentCard = elementBy(elementName);
+  const subElement = currentCard.querySelector('.card-item');
+  const infoElement = subElement.querySelector('.card-more');
+  subElement.className += " clicked";
+  infoElement.className += " clicked";
 }
 
 // DEALS
