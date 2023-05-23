@@ -33,18 +33,34 @@ window.onload = (event) => {
 };
 
 function addData(type) {
-  const url = baseURL + type +'.json'
-  fetch(url)
-  .then((response) => response.json())
-  .then((json) => {
-    let tab = elementBy(type + '-content');
-    removeAllDOMChildren(tab);
-    for (index in json) {
-      const item = json[index];
-      const row = cardView(item);
-      tab.appendChild(row);
+  var request = new XMLHttpRequest();
+  request.open('GET', baseURL + type+'.json', true);
+  request.onreadystatechange = function() {
+    if (request.readyState === 4 && request.status === 200) {
+      var json = JSON.parse(request.responseText);
+      let tab = elementBy(type + '-content');
+      removeAllDOMChildren(tab);
+      for (index in json) {
+        const item = json[index];
+        const row = cardView(item);
+        tab.appendChild(row);
+      }
     }
-  });
+  };
+  request.send();
+
+  // const url = "../datas/" + type +'.json'
+  // fetch(url)
+  // .then((response) => response.json())
+  // .then((json) => {
+  //   let tab = elementBy(type + '-content');
+  //   removeAllDOMChildren(tab);
+  //   for (index in json) {
+  //     const item = json[index];
+  //     const row = cardView(item);
+  //     tab.appendChild(row);
+  //   }
+  // });
 }
 
 function cardView(item) {
@@ -74,7 +90,6 @@ function openExploreTab(page) {
 
   // Get all elements with class="main-tab-link" and remove the class "active"
   tablinks = document.getElementsByClassName("explore-tab-links");
-  console.log( tablinks)
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }

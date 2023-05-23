@@ -628,7 +628,7 @@ ul#grid.gallery-items li.shuffle-item:hover a:after {
 /**************** 5.9 Signup Section ****************/
 
 section#signup {
-    background: url(../images/img/signup-bg.png) no-repeat #3cbeee;
+    /* background: url(../images/img/signup-bg.png) no-repeat #3cbeee; */
     background-position: left;
     padding: 60px 0;
     margin-top: 20px;
