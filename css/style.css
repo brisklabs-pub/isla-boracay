@@ -1277,6 +1277,7 @@ footer .copyright p {
 
 .card-solid-btn a {
     color: #f6f8f8;
+    padding: 10px 10px;
 }
 
 .card-solid-btn:hover {
