@@ -48,19 +48,6 @@ function addData(type) {
     }
   };
   request.send();
-
-  // const url = "../datas/" + type +'.json'
-  // fetch(url)
-  // .then((response) => response.json())
-  // .then((json) => {
-  //   let tab = elementBy(type + '-content');
-  //   removeAllDOMChildren(tab);
-  //   for (index in json) {
-  //     const item = json[index];
-  //     const row = cardView(item);
-  //     tab.appendChild(row);
-  //   }
-  // });
 }
 
 function cardView(item) {
