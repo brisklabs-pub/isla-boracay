@@ -1,6 +1,8 @@
-const baseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/';
+const exploreBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/explore';
+const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/deals';
+
 window.onload = (event) => {
-  // Standing
+  // EXPLORE
   openExploreTab('eat');
   const eat = elementBy('eat-tab');
   onClick(eat, ()=>{ openExploreTab('eat'); });
@@ -17,12 +19,12 @@ window.onload = (event) => {
   const directory = elementBy('emergency-tab');
   onClick(directory, ()=>{ openExploreTab('emergency');});
 
-  addData('eat');
-  addData('fun');
-  addData('stay');
-  addData('relax');
-  addData('party');
-  addData('shop');
+  addExploreData('eat');
+  addExploreData('fun');
+  addExploreData('stay');
+  addExploreData('relax');
+  addExploreData('party');
+  addExploreData('shop');
 
   // DEALS
   openDealTab('relax-deal');
@@ -30,11 +32,15 @@ window.onload = (event) => {
   onClick(activities_deal, ()=>{ openDealTab('activities-deal');});
   const relax_deal = elementBy('relax-deal-tab');
   onClick(relax_deal, ()=>{ openDealTab('relax-deal');});
+
+  addDealsData('relax');
+  addDealsData('activities');
 };
 
-function addData(type) {
+// EXPLORE
+function addExploreData(type) {
   var request = new XMLHttpRequest();
-  request.open('GET', baseURL + type+'.json', true);
+  request.open('GET', exploreBaseURL + type +'.json', true);
   request.onreadystatechange = function() {
     if (request.readyState === 4 && request.status === 200) {
       var json = JSON.parse(request.responseText);
@@ -42,7 +48,7 @@ function addData(type) {
       removeAllDOMChildren(tab);
       for (index in json) {
         const item = json[index];
-        const row = cardView(item);
+        const row = exploreCardView(item);
         tab.appendChild(row);
       }
     }
@@ -50,7 +56,7 @@ function addData(type) {
   request.send();
 }
 
-function cardView(item) {
+function exploreCardView(item) {
   const card = document.createElement('div');
   card.setAttribute('class', 'card');
   card.setAttribute('style', `background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
@@ -60,6 +66,40 @@ function cardView(item) {
       <p class="card-text">${item.address}</p>
       <button class="card-btn">
         <a href=${item.link} target="_blank">VISIT</a>
+      </button>
+    </div>`;
+  return card;
+}
+
+// DEALS
+function addDealsData(type) {
+  var request = new XMLHttpRequest();
+  request.open('GET', dealsBaseURL + type +'.json', true);
+  request.onreadystatechange = function() {
+    if (request.readyState === 4 && request.status === 200) {
+      var json = JSON.parse(request.responseText);
+      let tab = elementBy(type + '-deal-content');
+      removeAllDOMChildren(tab);
+      for (index in json) {
+        const item = json[index];
+        const row = dealCardView(item);
+        tab.appendChild(row);
+      }
+    }
+  };
+  request.send();
+}
+
+function dealCardView(item) {
+  const card = document.createElement('div');
+  card.setAttribute('class', 'card');
+  card.setAttribute('style', `background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
+  card.innerHTML = `
+    <div class ="card-item">
+      <h3 class="card-title">${item.title}</h3>
+      <p class="card-text">${item.company}</p>
+      <button class="card-solid-btn">
+        <a href=${item.link} target="_blank">READ MORE</a>
       </button>
     </div>`;
   return card;
@@ -109,6 +149,7 @@ function openDealTab(page) {
   tab.className += " active";
 }
 
+// HELPHER METHOD
 function elementBy(id) {
     return document.getElementById(id);
 }
