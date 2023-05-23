@@ -33,7 +33,7 @@ window.onload = (event) => {
 };
 
 function addData(type) {
-  const url = "../datas/" + type +'.json'
+  const url = baseURL + type +'.json'
   fetch(url)
   .then((response) => response.json())
   .then((json) => {
