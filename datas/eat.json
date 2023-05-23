@@ -1,5 +1,41 @@
 [
     {
+        "name": "Boracay Beach Truck",
+        "address": "Main Entrance, D'mall of Boracay",
+        "thumbnail": "./images/explore/resto/boracay-beach-truck.jpg",
+        "contact": "+9691490059",
+        "email": "info@boracaybeachtruck.com.ph",
+        "link": "https://boracaybeachtruck.com.ph/",
+        "notes": "The first original food truck in Boracay Island, Philippines"
+    },
+    {
+        "name": "Aria Gelato",
+        "address": "Beach front Dmall of Boracay",
+        "thumbnail": "./images/explore/resto/aria-gelato.jpg",
+        "contact": "(+36) 288 - 5573 or 777",
+        "email": "info@aria.com.ph",
+        "link": "https://www.aria.com.ph/ariagelato/",
+        "notes": "Authentic Italian Ice Cream"
+    },
+    {
+        "name": "Aria Cucina Italiana",
+        "address": "Beach front, D'mall of Boracay",
+        "thumbnail": "./images/explore/resto/aria-cucina-italiana.jpg",
+        "contact": "0998-4828490",
+        "email": "info@aria.com.ph",
+        "link": "http://www.aria.com.ph/",
+        "notes": "Authentic Italian Brick Oven Pizza"
+    },
+    {
+        "name": "Hama Japanese Cuisine",
+        "address": "D'mall Plaza, Station 2, Boracay",
+        "thumbnail": "./images/explore/resto/hama.jpg",
+        "contact": "288-5978",
+        "email": "info@hama.com.ph",
+        "link": "https://hama.com.ph/",
+        "notes": "HAMA, Boracay’s premier Japanese restaurant is a culinary mix of time-honored tradition and contemporary innovation."
+    },
+    {
         "name": "Cafe Del Sol",
         "address": "D’Mall Beachfront, Boracay",
         "thumbnail": "./images/explore/resto/cafe-del-sol.jpeg",
