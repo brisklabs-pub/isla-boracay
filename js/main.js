@@ -4,20 +4,45 @@ const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/m
 window.onload = (event) => {
   // EXPLORE
   openExploreTab('eat');
+  
   const eat = elementBy('eat-tab');
-  onClick(eat, ()=>{ openExploreTab('eat'); });
+  onClick(eat, ()=>{ 
+    openExploreTab('eat'); 
+    tagEvent('did_open_explore_eat');
+  });
+
   const fun = elementBy('fun-tab');
-  onClick(fun, ()=>{ openExploreTab('fun'); });
+  onClick(fun, ()=>{
+    openExploreTab('fun'); 
+    tagEvent('did_open_explore_fun');
+  });
+
   const stay = elementBy('stay-tab');
-  onClick(stay, ()=>{ openExploreTab('stay'); });
+  onClick(stay, ()=>{ 
+    openExploreTab('stay');
+    tagEvent('did_open_explore_stay');
+  });
+  
   const relax = elementBy('relax-tab');
-  onClick(relax, ()=>{ openExploreTab('relax'); });
+  onClick(relax, ()=>{ 
+    openExploreTab('relax');
+    tagEvent('did_open_explore_relax');
+  });
+  
   const party = elementBy('party-tab');
-  onClick(party, ()=>{ openExploreTab('party');});
+  onClick(party, ()=>{ 
+    openExploreTab('party');
+    tagEvent('did_open_explore_party');
+  });
+  
   const shop = elementBy('shop-tab');
-  onClick(shop, ()=>{ openExploreTab('shop');});
-  const directory = elementBy('emergency-tab');
-  onClick(directory, ()=>{ openExploreTab('emergency');});
+  onClick(shop, ()=>{ 
+    openExploreTab('shop');
+    tagEvent('did_open_explore_shop');
+  });
+  
+  // const directory = elementBy('emergency-tab');
+  // onClick(directory, ()=>{ openExploreTab('emergency');});
 
   addExploreData('eat');
   addExploreData('fun');
@@ -29,9 +54,16 @@ window.onload = (event) => {
   // DEALS
   openDealTab('relax-deal');
   const activities_deal = elementBy('activities-deal-tab');
-  onClick(activities_deal, ()=>{ openDealTab('activities-deal');});
+  onClick(activities_deal, ()=>{ 
+    openDealTab('activities-deal');
+    tagEvent('did_open_deals_activities');
+  });
+  
   const relax_deal = elementBy('relax-deal-tab');
-  onClick(relax_deal, ()=>{ openDealTab('relax-deal');});
+  onClick(relax_deal, ()=>{ 
+    openDealTab('relax-deal');
+    tagEvent('did_open_deals_relax');
+  });
 
   addDealsData('relax');
   addDealsData('activities');
@@ -169,4 +201,11 @@ function removeAllDOMChildren(parent) {
     // Delete everything that is selected
     rangeObj.deleteContents();
   }
+}
+
+function tagEvent(event_label) {
+  gtag('event', 'Click', {
+    'event_category': 'Button',
+    'event_label': event_label
+  });
 }
