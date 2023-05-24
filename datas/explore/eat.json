@@ -1,5 +1,14 @@
 [
     {
+        "name": "Back Beach Burger",
+        "address": "3rd floor of Building fronting the Grotto, Station 1",
+        "thumbnail": "./images/explore/resto/back-beach-burger.jpeg",
+        "contact": "",
+        "email": "",
+        "link": "https://www.instagram.com/backbeachburgers",
+        "notes": "Have juicy burgers & cocktails, while enjoying the view of the beach"
+    },
+    {
         "name": "Boracay Beach Truck",
         "address": "Main Entrance, D'mall of Boracay",
         "thumbnail": "./images/explore/resto/boracay-beach-truck.jpg",
