@@ -1,7 +1,8 @@
 const exploreBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/explore/';
 const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/deals/';
-var map;
-var marker;
+// var map;
+// var marker;
+var coordinates = [11.969, 121.924];
 var currentName = null;
 var modal = elementBy('modal-popup');
 
@@ -72,22 +73,26 @@ window.onload = (event) => {
   window.addEventListener('click', function(event) {
     if (event.target == modal) {
       modal.className = modal.className.replace(" open", "");
+      var iframe = document.getElementById('my-iframe');
+      iframe.contentDocument.open();
+      iframe.contentDocument.close();
     }
   });
 
-  // Create Mapp
-  map = L.map('map', {
-    center: [11.969, 121.924],
-    zoom: 14,
-    zoomControl: true,
-    doubleClickZoom: true,
-  });
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
+  // // Create Mapp
+  // map = L.map('map', {
+  //   center: [11.969, 121.924],
+  //   zoom: 14,
+  //   zoomControl: true,
+  //   doubleClickZoom: true,
+  // });
+  // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  //   maxZoom: 19,
+  //   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  // }).addTo(map);
 
-  marker = L.marker([11.969, 121.924]);
+  // marker = L.marker([11.969, 121.924]);
+  // marker.addTo(map);
 
 };
 
@@ -143,7 +148,12 @@ function exploreCardView(item) {
   card.appendChild(cardItem);
 
   onClick(directionBtn, ()=> {
-    openPopup(item.coordinates);
+    console.log(item.coordinates);
+    openMapPopup(item.coordinates, item);
+  });
+
+  onClick(visitBtn, ()=> {
+    window.open(item.link, "_blank");
   });
 
   return card;
@@ -178,10 +188,16 @@ function openItem(elementName) {
 }
 
 // Function to open the popup
-function openPopup(coordinates) {
+function openMapPopup(coordinates, item) {
   modal.className += ' open';
-  marker.flyTo(coordinates);
-  marker.update();
+  var iframe = document.getElementById('my-iframe');
+  var params = new URLSearchParams();
+  params.append('lat', coordinates[0]);
+  params.append('lon', coordinates[1]);
+  params.append('name', item.name);
+  params.append('address', item.address);
+  var queryString = params.toString();
+  iframe.src = "../mapview.html?" + queryString;
 }
 
 // DEALS

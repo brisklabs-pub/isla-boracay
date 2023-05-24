@@ -56,7 +56,8 @@
         "contact": "09984828490",
         "email": "info@cafedelsol.com.ph",
         "link": "http://www.cafedelsol.com.ph/",
-        "notes": "Boracay’s first modern, full-service coffee shop"
+        "notes": "Boracay’s first modern, full-service coffee shop",
+        "coordinates": [11.962035601385692, 121.92460365326014]
     },
     {
         "name": "Cafe maruja",
@@ -65,7 +66,8 @@
         "contact": "0926 084 4793",
         "email": "boracay@cafemaruja.com",
         "link": "https://www.cafemaruja.com/",
-        "notes": ""
+        "notes": "",
+        "coordinates": [11.953894696583406, 121.9291777379143]
     },
     {
         "name": "La Bettola Boracay",
@@ -74,7 +76,8 @@
         "contact": "0956 229 4968",
         "email": "mrdlabettola@gmail.com",
         "link": "https://web.facebook.com/pages/MrD-La-Bettola-Boracay/102650864581155",
-        "notes": ""
+        "notes": "",
+        "coordinates": [11.965042915924352, 121.9277599244237]
     },
     {
         "name": "Tacio's Boracay",
@@ -83,7 +86,8 @@
         "contact": "0956 543 5447",
         "email": "taciosboracay@gmail.com",
         "link": "https://web.facebook.com/tacios.bistro.boracay",
-        "notes": "Tacio's of Cubao Expo is now open at Seabird Resort Boracay. Delicious and affordable!"
+        "notes": "Tacio's of Cubao Expo is now open at Seabird Resort Boracay. Delicious and affordable!",
+        "coordinates": [11.962803821566265, 121.92466832442376]
     },
     {
         "name": "Lemoni Cafe & Restaurant",
@@ -92,7 +96,8 @@
         "contact": "0977 857 7155",
         "email": "lemonicafe@yahoo.com.ph",
         "link": "https://web.facebook.com/Lemonicafe.Boracay",
-        "notes": ""
+        "notes": "",
+        "coordinates": [11.962420188636912, 121.92478713791445]
     },
     {
         "name": "Don Rite Boracay",
@@ -101,6 +106,7 @@
         "contact": "0908-888-6059",
         "email": "donriteboracay@yahoo.com",
         "link": "https://web.facebook.com/donritedeliboracay",
-        "notes": ""
+        "notes": "",
+        "coordinates": [11.95960838722332, 121.92875580907808]
     }
 ]

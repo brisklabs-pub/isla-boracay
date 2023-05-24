@@ -1350,9 +1350,9 @@ a#loadMore:focus {
 .map-modal-content {
     background-color: #fff;
     border-radius: 30px;
-    height: 60%;
-    width: 70%;
-    margin: 15% auto;
+    height: 70%;
+    width: 90%;
+    margin: 5% auto;
     padding: 10px;
     border: 1px solid #888;
     max-width: 600px;
@@ -1367,6 +1367,11 @@ a#loadMore:focus {
 
 #map {
     border-radius: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+#my-iframe {
     height: 100%;
     width: 100%;
 }
