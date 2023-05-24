@@ -197,7 +197,7 @@ function openMapPopup(coordinates, item) {
   params.append('name', item.name);
   params.append('address', item.address);
   var queryString = params.toString();
-  iframe.src = "../mapview.html?" + queryString;
+  iframe.src = "https://www.islaboracay.xyz/mapview.html?" + queryString;
 }
 
 // DEALS

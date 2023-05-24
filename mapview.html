@@ -29,9 +29,32 @@
 	<script>
 
 	window.onload = function () {
+
+		var lat = 11.969;
+		var lon = 121.924;
+		var name = "Boracay Island";
+		var address = "Boracay, Malay Aklan"
+
+		var params = new URLSearchParams(window.location.search);
+
+		params.forEach(function(value, key) {
+			if (key === 'lat') {
+				lat = value;
+			}
+			if (key === 'lon') {
+				lon = value;
+			}
+			if (key === 'lat') {
+				name =  value
+			}
+			if (key === 'address') {
+				address = value;
+			}
+		});
+
 		// Create Mapp
 		const map = L.map('map', {
-    	center: [11.969, 121.924],
+    	center: [lat, lon],
     	zoom: 14,
     	zoomControl: true,
     	doubleClickZoom: true,
@@ -41,8 +64,9 @@
 			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 		}).addTo(map);
 
-		marker = L.marker([11.969, 121.924]);
+		marker = L.marker([lat, lon]);
 		marker.addTo(map);
+		marker.bindPopup(`${name} <br> ${address}`).openPopup();
 	}
 	</script>
 </body>
