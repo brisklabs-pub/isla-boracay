@@ -1,6 +1,7 @@
 const exploreBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/explore/';
 const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/deals/';
 var map;
+var marker;
 var currentName = null;
 var modal = elementBy('modal-popup');
 
@@ -67,24 +68,26 @@ window.onload = (event) => {
   addDealsData('relax');
   addDealsData('activities');
 
+  // Direction popup
   window.addEventListener('click', function(event) {
     if (event.target == modal) {
       modal.className = modal.className.replace(" open", "");
     }
   });
 
-  var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  })
-
   // Create Mapp
   map = L.map('map', {
     center: [11.969, 121.924],
-    zoom: 13,
+    zoom: 14,
     zoomControl: true,
     doubleClickZoom: true,
-    layers: [osm]
   });
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+
+  marker = L.marker([11.969, 121.924]);
 
 };
 
@@ -140,7 +143,7 @@ function exploreCardView(item) {
   card.appendChild(cardItem);
 
   onClick(directionBtn, ()=> {
-    openPopup();
+    openPopup(item.coordinates);
   });
 
   return card;
@@ -175,9 +178,10 @@ function openItem(elementName) {
 }
 
 // Function to open the popup
-function openPopup() {
+function openPopup(coordinates) {
   modal.className += ' open';
-  L.marker([11.969, 121.924]).addTo(map);
+  marker.flyTo(coordinates);
+  marker.update();
 }
 
 // DEALS

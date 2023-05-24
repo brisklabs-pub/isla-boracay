@@ -6,7 +6,8 @@
         "contact": "",
         "email": "",
         "link": "https://www.instagram.com/backbeachburgers",
-        "notes": "Have juicy burgers & cocktails, while enjoying the view of the beach"
+        "notes": "Have juicy burgers & cocktails, while enjoying the view of the beach",
+        "coordinates": [11.968904112279697, 121.91899711953151]
     },
     {
         "name": "Boracay Beach Truck",
@@ -15,7 +16,8 @@
         "contact": "+9691490059",
         "email": "info@boracaybeachtruck.com.ph",
         "link": "https://boracaybeachtruck.com.ph/",
-        "notes": "The first original food truck in Boracay Island, Philippines"
+        "notes": "The first original food truck in Boracay Island, Philippines",
+        "coordinates": [11.963383391920747, 121.92640949558727]
     },
     {
         "name": "Aria Gelato",
@@ -24,7 +26,8 @@
         "contact": "(+36) 288 - 5573 or 777",
         "email": "info@aria.com.ph",
         "link": "https://www.aria.com.ph/ariagelato/",
-        "notes": "Authentic Italian Ice Cream"
+        "notes": "Authentic Italian Ice Cream",
+        "coordinates": [11.961906517996878, 121.92477805326006]
     },
     {
         "name": "Aria Cucina Italiana",
@@ -33,7 +36,8 @@
         "contact": "0998-4828490",
         "email": "info@aria.com.ph",
         "link": "http://www.aria.com.ph/",
-        "notes": "Authentic Italian Brick Oven Pizza"
+        "notes": "Authentic Italian Brick Oven Pizza",
+        "coordinates": [11.96187506151996, 121.9246637293277]
     },
     {
         "name": "Hama Japanese Cuisine",
@@ -42,7 +46,8 @@
         "contact": "288-5978",
         "email": "info@hama.com.ph",
         "link": "https://hama.com.ph/",
-        "notes": "HAMA, Boracay’s premier Japanese restaurant is a culinary mix of time-honored tradition and contemporary innovation."
+        "notes": "HAMA, Boracay’s premier Japanese restaurant is a culinary mix of time-honored tradition and contemporary innovation.",
+        "coordinates": [11.962309392880487, 121.9252036955874]
     },
     {
         "name": "Cafe Del Sol",
