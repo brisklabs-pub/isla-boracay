@@ -73,9 +73,6 @@ window.onload = (event) => {
   window.addEventListener('click', function(event) {
     if (event.target == modal) {
       modal.className = modal.className.replace(" open", "");
-      var iframe = document.getElementById('my-iframe');
-      iframe.contentDocument.open();
-      iframe.contentDocument.close();
     }
   });
 
