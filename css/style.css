@@ -628,7 +628,7 @@ ul#grid.gallery-items li.shuffle-item:hover a:after {
 /**************** 5.9 Signup Section ****************/
 
 section#signup {
-    background-color:#3cbeee;
+    background-color: #3cbeee;
     padding: 60px 0;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -1212,7 +1212,7 @@ footer .copyright p {
     border-bottom-right-radius: 10px;
     color: #f6f8f8;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .25), 2px 2px 1px rgba(0, 0, 0, .25) !important;
-    -webkit-transition:  0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
     -moz-transition: 0.3s ease-out;
     -ms-transition: 0.3s ease-out;
     -o-transition: 0.3s ease-out;
@@ -1222,7 +1222,7 @@ footer .copyright p {
 .card-item.clicked {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.35));
     margin-top: 0px !important;
-    -webkit-transition:  0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
     -moz-transition: 0.3s ease-out;
     -ms-transition: 0.3s ease-out;
     -o-transition: 0.3s ease-out;
@@ -1249,10 +1249,10 @@ footer .copyright p {
     pointer-events: none;
 }
 
-.card-more.clicked  {
+.card-more.clicked {
     opacity: 1;
     transition: ease-in 0.3s ease-in;
-    pointer-events:all;
+    pointer-events: all;
 }
 
 .card-btn {
@@ -1328,4 +1328,45 @@ article.deals-listing {
 
 a#loadMore:focus {
     color: #999;
+}
+
+/* PopUp */
+.map-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.map-modal.open {
+    display: block;
+}
+
+.map-modal-content {
+    background-color: #fff;
+    border-radius: 30px;
+    height: 60%;
+    width: 70%;
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    max-width: 600px;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+#map {
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
 }

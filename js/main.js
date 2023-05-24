@@ -1,5 +1,8 @@
 const exploreBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/explore/';
 const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/deals/';
+var map;
+var currentName = null;
+var modal = elementBy('modal-popup');
 
 window.onload = (event) => {
   // EXPLORE
@@ -40,10 +43,6 @@ window.onload = (event) => {
     openExploreTab('shop');
     tagEvent('did_open_explore_shop');
   });
-  
-  // const directory = elementBy('emergency-tab');
-  // onClick(directory, ()=>{ openExploreTab('emergency');});
-
   addExploreData('eat');
   addExploreData('fun');
   addExploreData('stay');
@@ -67,6 +66,26 @@ window.onload = (event) => {
 
   addDealsData('relax');
   addDealsData('activities');
+
+  window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+      modal.className = modal.className.replace(" open", "");
+    }
+  });
+
+  var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  })
+
+  // Create Mapp
+  map = L.map('map', {
+    center: [11.969, 121.924],
+    zoom: 13,
+    zoomControl: true,
+    doubleClickZoom: true,
+    layers: [osm]
+  });
+
 };
 
 // EXPLORE
@@ -96,24 +115,48 @@ function exploreCardView(item) {
   card.setAttribute('class', 'card');
   card.setAttribute('id', item.name);
   card.setAttribute('style', `background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
-  card.innerHTML = `
-    <div class ="card-item">
-      <h3 class="card-title">${item.name}</h3>
-      <p class="card-text">${item.address}</p>
-      <div class="card-more">
-        <p class="card-text">${item.notes}</p>
-        <button class="card-btn">
-          <a href=${item.link} target="_blank">VISIT</a>
-        </button>
-        <button class="card-btn">
-          <a href=${item.link} target="_blank">DIRECTION</a>
-        </button>
-      </div>
-    </div>`;
+  
+  const cardItem = document.createElement('div');
+  cardItem.setAttribute('class', 'card-item');
+  cardItem.innerHTML = `
+    <h3 class="card-title">${item.name}</h3> 
+    <p class="card-text">${item.address}</p>`;
+
+  const cardMore = document.createElement('div');
+  cardMore.setAttribute('class', 'card-more');
+  cardMore.innerHTML = `<p class="card-text">${item.notes}</p>`;
+
+  // Buttons
+  const visitBtn =  document.createElement('button');
+  visitBtn.setAttribute('class', 'card-btn');
+  visitBtn.innerText = `VISIT`;
+  
+  const directionBtn =  document.createElement('button');
+  directionBtn.setAttribute('class', 'card-btn');
+  directionBtn.innerText = `DIRECTION`;
+  cardMore.appendChild(visitBtn);
+  cardMore.appendChild(directionBtn);
+  cardItem.appendChild(cardMore);
+  card.appendChild(cardItem);
+
+  onClick(directionBtn, ()=> {
+    openPopup();
+  });
+
   return card;
 }
 
 function openItem(elementName) {
+  if (currentName === elementName) {
+    var c_currentCard = elementBy(elementName);
+    const c_subElement = c_currentCard.querySelector('.card-item.clicked');
+    const c_infoElement = c_subElement.querySelector('.card-more.clicked');
+    c_subElement.className = c_subElement.className.replace(" clicked", "");
+    c_infoElement.className = c_infoElement.className.replace(" clicked", "");
+    currentName = null;
+    return;
+  }
+  
   var cards = document.getElementsByClassName("card-item");
   for (i = 0; i < cards.length; i++) {
     cards[i].className = cards[i].className.replace(" clicked", "");
@@ -128,6 +171,13 @@ function openItem(elementName) {
   const infoElement = subElement.querySelector('.card-more');
   subElement.className += " clicked";
   infoElement.className += " clicked";
+  currentName = elementName;
+}
+
+// Function to open the popup
+function openPopup() {
+  modal.className += ' open';
+  L.marker([11.969, 121.924]).addTo(map);
 }
 
 // DEALS
@@ -210,12 +260,12 @@ function openDealTab(page) {
 
 // HELPHER METHOD
 function elementBy(id) {
-    return document.getElementById(id);
+  return document.getElementById(id);
 }
 
 function onClick(element, action) {
     if (element) {
-        element.addEventListener("click", action);
+      element.addEventListener("click", action);
     }
 }
 

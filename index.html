@@ -20,6 +20,10 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
 
+    <!-- ===== leaflet Map  ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+
     <!-- ===== Google Fonts ===== -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans" rel="stylesheet">
 
@@ -193,7 +197,15 @@
         </div>
     </section>
     <!-- ===== End of Training Courses Section ===== -->
-    
+
+    <!-- Popup container of map directions-->
+    <div id="modal-popup" class="map-modal" tabindex="-1" role="dialog">
+        <div class="map-modal-content" role="document">
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
     
     <!-- ===== Start of deals header ===== -->
     <section id="signup">
@@ -365,77 +377,7 @@
     </section>
     <!-- ===== End of Gallery Section ===== -->
     
-        
-    <!-- ===== Start of Latest Event Section ===== -->
-    <section id="events">
-        <div class="container pad80">
-            <div class="col-md-12">
-                <h2 class="section-title">Latest Events</h2>
-                <p class="section-descr">Immerse Yourself in the Unforgettable Moments of the Island's Newest Events.</p>
-            </div>
-
-            <!-- Start of Calendar -->
-            <div class="col-md-6 pad80">
-
-                <!-- Start of Calendar Container -->
-                <div class="calendar-container">
-                    <div class="calendar">
-                        <!-- start of the Calendars header -->
-                        <header>
-                            <h3 class="month"></h3>
-                            <a class="btn-prev fa fa-arrow-circle-left"></a>
-                            <a class="btn-next fa fa-arrow-circle-right"></a>
-                        </header>
-                        <!-- End of the Calendars header -->
-
-                        <table class="table-responsive">
-                            <thead class="event-days">
-                                <tr></tr>
-                            </thead>
-                            <tbody class="event-calendar">
-                                <tr class="1"></tr>
-                                <tr class="2"></tr>
-                                <tr class="3"></tr>
-                                <tr class="4"></tr>
-                                <tr class="5"></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- End of Calendar Container -->
-
-            </div>
-            <!-- End of Calendar -->
-
-            <!-- Start of Events List -->
-            <div class="col-md-6 pad80">
-
-                <div class="list">
-                    <!-- Start of Event 1 -->
-                    <div class="day-event active" date-month="10" date-day="9" event-class="event">
-                        <div class="event-img">
-                            <img src="./images/events/10-09-2023.jpeg" class="img-responsive" alt="">
-                        </div>
-
-                        <div class="event-details active">
-                            <h4>EASTER HOLIDAY BREAK</h4>
-                            <p class="date">10 - 09 - 2023</p>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae tellus orci. Nulla dictum semper leo. Suspendisse dui magna, tincidunt et nisi id, aliquam ultrices odio. Nunc non ipsum ac mauris facilisis placerat a quis magna. Morbi velit leo, commodo tempor sagittis ut,.</p>
-                            <a href="www.boracayyoga.org" class="btn button" target="_blank">Read more!</a>
-                        </div>
-                    </div>
-                    <!-- End of Event 1 -->
-
-                </div>
-                <!-- End of List -->
-            </div>
-            <!-- End of Events List -->
-
-        </div>
-    </section>
-    <!-- ===== End of Latest Event Section ===== -->
-
-
+    
     <!-- ===== Start of Footer ===== -->
     <footer id="main-footer">
         <div class="container">
