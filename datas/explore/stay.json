@@ -1,11 +1,22 @@
 [
     {
+        "name": "Bamboo Beach Resort",
+        "address": "Station3, Beach Front, Manggayad, Manocmanoc, Boracay Island",
+        "thumbnail": "./images/explore/stay/bamboo-beach-boracay.jpeg",
+        "contact": "0927 2088112 / 09293887701",
+        "email": "bamboo_resort@yahoo.com, info@bamboobeachresort.com.ph, reservations@bamboobeachresort.com.ph",
+        "link": "www.bamboobeachresort.com.ph",
+        "notes": "",
+        "coordinates": [11.955057018101417, 121.92913021259741]
+    },
+    {
         "name": "Chill Out Hostel Boracay",
         "address": "Bulabog Rd, near Iglesia Ni Cristro Church, Malay, Philippines",
         "thumbnail": "./images/explore/stay/chill-out-hostel.JPG",
         "contact": "0917 718 8159",
         "email": "chillouthostel@yahoo.com",
         "link": "https://www.chillouthostelboracay.com/en/",
-        "notes": ""
+        "notes": "",
+        "coordinates": [11.966316645532688, 121.9263537105363]
     }
 ]

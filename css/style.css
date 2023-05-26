@@ -1322,13 +1322,15 @@ footer .copyright p {
 
 /**************** 8.1 deals Listing ****************/
 
-article.deals-listing {
+#eat-content .card.item-listing {
     display: none;
 }
 
 a#loadMore:focus {
     color: #999;
 }
+
+
 
 /* PopUp */
 .map-modal {

@@ -286,6 +286,22 @@ Author URI: gnodesign.com
             });
         });
 
+        /*----------------------------------------------------
+          LOAD MORE eats
+        ----------------------------------------------------*/
+        // $(function () {
+        //     $("#eat-content .card.item-listing").slice(0, 3).show();
+        //     $("#loadMore").on('click', function (e) {
+        //         e.preventDefault();
+        //         $("#eat-content .card.item-listing:hidden").slice(0, 3).slideDown(400);
+                
+        //         if ($("#eat-content .card.item-listing:hidden").length == 0) {    
+        //             $('#loadmsg').html('<div class="alert alert-success">No more posts to load.</div>').fadeIn(700);
+        //             $("#loadMore").fadeOut(600);
+        //         }
+        //     });
+        // });
+
 
         /*----------------------------------------------------
           LOAD MORE EVENTS - TIMELINE
