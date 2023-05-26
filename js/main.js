@@ -1,14 +1,15 @@
 const exploreBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/explore/';
 const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/deals/';
-// var map;
-// var marker;
 var coordinates = [11.969, 121.924];
 var currentName = null;
 var modal = elementBy('modal-popup');
 
+const initialItems = 5;
+const cardsToShowIncrement = 6;
+
 window.onload = (event) => {
   // EXPLORE
-  openExploreTab('eat');
+  openExploreTab('eat');  
   
   const eat = elementBy('eat-tab');
   onClick(eat, ()=>{ 
@@ -75,22 +76,6 @@ window.onload = (event) => {
       modal.className = modal.className.replace(" open", "");
     }
   });
-
-  // // Create Mapp
-  // map = L.map('map', {
-  //   center: [11.969, 121.924],
-  //   zoom: 14,
-  //   zoomControl: true,
-  //   doubleClickZoom: true,
-  // });
-  // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  //   maxZoom: 19,
-  //   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  // }).addTo(map);
-
-  // marker = L.marker([11.969, 121.924]);
-  // marker.addTo(map);
-
 };
 
 // EXPLORE
@@ -104,23 +89,34 @@ function addExploreData(type) {
       removeAllDOMChildren(tab);
       for (index in json) {
         const item = json[index];
-        const row = exploreCardView(item);
+        const row = exploreCardView(item, index);
         onClick(row, ()=>{
           openItem(item.name);
         });
         tab.appendChild(row);
       }
+      const loadMore = elementBy('loadMore-'+type);
+      onClick(loadMore, ()=> { 
+        showCards(type);
+        tagEvent('did_load_more_explore_'+type);
+      });
     }
   };
   request.send();
 }
 
-function exploreCardView(item) {
+function exploreCardView(item, index) {
   const card = document.createElement('div');
   card.setAttribute('class', 'card');
   card.setAttribute('id', item.name);
-  card.setAttribute('style', `background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
-  
+  // Load initial cound
+  if (index <= initialItems) {
+    card.setAttribute('style', `display:block; background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
+  } else {
+    card.classList.add("fade-in");
+    card.setAttribute('style', `display:none; background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
+  }
+
   const cardItem = document.createElement('div');
   cardItem.setAttribute('class', 'card-item');
   cardItem.innerHTML = `
@@ -275,6 +271,37 @@ function openDealTab(page) {
   tab.className += " active";
 }
 
+// Function to Load more (show/hide) the cards based on the count
+function showCards(section) {
+  // Card container
+  const cardContainer = elementBy(section+"-content");
+  // Get all the cards
+  const cards = cardContainer.getElementsByClassName("card");
+  // Calculate the next count of cards to show
+  const currentCount = Array.from(cards).filter(card => getComputedStyle(card).display !== "none").length;
+  const nextCount = currentCount + cardsToShowIncrement;
+  for (let i = 0; i < cards.length; i++) {
+    if (i < nextCount) {
+      cards[i].style.display = "block";
+      setTimeout(() => {
+        cards[i].classList.add("show");
+      }, 10);
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+
+  // Hide the load more button if all cards are shown
+  if (nextCount >= cards.length) {
+    const loadMore = elementBy('loadMore-'+section);
+    const loadmsg = elementBy('loadmsg-'+section);
+    loadMore.style.display = "none";
+    loadMore.style.opacity = 0;
+    loadmsg.innerHTML = '<div class="alert alert-success">No more items to load.</div>';
+    loadmsg.style.opacity = 1;
+  }
+}
+
 // HELPHER METHOD
 function elementBy(id) {
   return document.getElementById(id);
@@ -298,8 +325,8 @@ function removeAllDOMChildren(parent) {
 }
 
 function tagEvent(event_label) {
-  gtag('event', 'Click', {
-    'event_category': 'Button',
-    'event_label': event_label
-  });
+  // gtag('event', 'Click', {
+  //   'event_category': 'Button',
+  //   'event_label': event_label
+  // });
 }

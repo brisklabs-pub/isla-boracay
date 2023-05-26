@@ -271,52 +271,7 @@ Author URI: gnodesign.com
             responsiveRefreshRate: 200
         });
 
-        /*----------------------------------------------------
-          LOAD MORE deals POSTS
-        ----------------------------------------------------*/
-        $(function () {
-            $("article.deals-listing").slice(0, 3).show();
-            $("#loadMore").on('click', function (e) {
-                e.preventDefault();
-                $("article.deals-listing:hidden").slice(0, 2).slideDown(400);
-                if ($("article.deals-listing:hidden").length == 0) {
-                    $('#loadmsg').html('<div class="alert alert-success">No more posts to load.</div>').fadeIn(700);
-                    $("#loadMore").fadeOut(600);
-                }
-            });
-        });
-
-        /*----------------------------------------------------
-          LOAD MORE eats
-        ----------------------------------------------------*/
-        // $(function () {
-        //     $("#eat-content .card.item-listing").slice(0, 3).show();
-        //     $("#loadMore").on('click', function (e) {
-        //         e.preventDefault();
-        //         $("#eat-content .card.item-listing:hidden").slice(0, 3).slideDown(400);
-                
-        //         if ($("#eat-content .card.item-listing:hidden").length == 0) {    
-        //             $('#loadmsg').html('<div class="alert alert-success">No more posts to load.</div>').fadeIn(700);
-        //             $("#loadMore").fadeOut(600);
-        //         }
-        //     });
-        // });
-
-
-        /*----------------------------------------------------
-          LOAD MORE EVENTS - TIMELINE
-        ----------------------------------------------------*/
-        $(function () {
-            $(".timeline > li").slice(0, 2).show();
-            $("section#timeline .load a").on('click', function (e) {
-                e.preventDefault();
-                $(".timeline > li").slice(0, 4).fadeIn(600);
-                if ($(".timeline > li:hidden").length == 0) {
-                    $('#loadmsg').html('<div class="alert alert-success">No more timeline events to load.</div>').fadeIn(700);
-                    $("section#timeline .load a").fadeOut(600);
-                }
-            });
-        });
+       
     }); //end of document ready function
 
 })(jQuery);

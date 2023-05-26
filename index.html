@@ -47,13 +47,13 @@
     <link rel="stylesheet" type="text/css" href="./css/responsive.css">
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L73386Z7C2"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-L73386Z7C2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-L73386Z7C2');
-    </script>
+    </script> -->
 </head>
 
 <body>
@@ -177,28 +177,48 @@
                 <div id="eat-content" class="tab-list">
                 </div>
                 <div class="col-md-12 text-center">
-                    <a href="#" class="btn-border" id="loadMore">Load more</a>
-                    <div id="loadmsg"></div>
+                    <button id="loadMore-eat" class="btn-border fade-out">Load more</button>
+                    <div id="loadmsg-eat" class="fade-in"></div>
                 </div>
             </div>
             <div id="fun" class="tab-content explore-tab-content">
                 <div id="fun-content" class="tab-list">
                 </div>
+                <div class="col-md-12 text-center">
+                    <button id="loadMore-fun" class="btn-border fade-out" >Load more</button>
+                    <div id="loadmsg-fun" class="fade-in"></div>
+                </div>
             </div>
             <div id="relax" class="tab-content explore-tab-content">
                 <div id="relax-content" class="tab-list">
+                </div>
+                <div class="col-md-12 text-center">
+                    <button id="loadMore-relax" class="btn-border fade-out" >Load more</button>
+                    <div id="loadmsg-relax" class="fade-in"></div>
                 </div>
             </div>
             <div id="party" class="tab-content explore-tab-content">
                 <div id="party-content" class="tab-list">
                 </div>
+                <div class="col-md-12 text-center">
+                    <button id="loadMore-party" class="btn-border fade-out" >Load more</button>
+                    <div id="loadmsg-party" class="fade-in"></div>
+                </div>
             </div>
             <div id="shop" class="tab-content explore-tab-content">
                 <div id="shop-content" class="tab-list">
                 </div>
+                <div class="col-md-12 text-center">
+                    <button id="loadMore-shop" class="btn-border fade-out" >Load more</button>
+                    <div id="loadmsg-shop" class="fade-in"></div>
+                </div>
             </div>
             <div id="stay" class="tab-content explore-tab-content">
                 <div id="stay-content" class="tab-list">
+                </div>
+                <div class="col-md-12 text-center">
+                    <button id="loadMore-stay" class="btn-border fade-out" >Load more</button>
+                    <div id="loadmsg-stay" class="fade-in"></div>
                 </div>
             </div>
         </div>
@@ -463,6 +483,5 @@
     <script src="./js/jquery.shuffle.min.js"></script>
 
     <script src="./js/main.js"></script>
-
 </body>
 </html>
