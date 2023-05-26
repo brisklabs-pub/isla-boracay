@@ -6,6 +6,7 @@
         "contact": "",
         "email": "",
         "link": "https://www.instagram.com/backbeachburgers",
+        "video": "./images/explore/resto/back-beach-burger.mov",
         "notes": "Have juicy burgers & cocktails, while enjoying the view of the beach",
         "coordinates": [11.968904112279697, 121.91899711953151]
     },
@@ -16,6 +17,7 @@
         "contact": "+9691490059",
         "email": "info@boracaybeachtruck.com.ph",
         "link": "https://boracaybeachtruck.com.ph/",
+        "video": "",
         "notes": "The first original food truck in Boracay Island, Philippines",
         "coordinates": [11.963383391920747, 121.92640949558727]
     },
@@ -26,6 +28,7 @@
         "contact": "(+36) 288 - 5573 or 777",
         "email": "info@aria.com.ph",
         "link": "https://www.aria.com.ph/ariagelato/",
+        "video": "",
         "notes": "Authentic Italian Ice Cream",
         "coordinates": [11.961906517996878, 121.92477805326006]
     },
@@ -36,6 +39,7 @@
         "contact": "0998-4828490",
         "email": "info@aria.com.ph",
         "link": "http://www.aria.com.ph/",
+        "video": "",
         "notes": "Authentic Italian Brick Oven Pizza",
         "coordinates": [11.96187506151996, 121.9246637293277]
     },
@@ -46,6 +50,7 @@
         "contact": "288-5978",
         "email": "info@hama.com.ph",
         "link": "https://hama.com.ph/",
+        "video": "",
         "notes": "HAMA, Boracay’s premier Japanese restaurant is a culinary mix of time-honored tradition and contemporary innovation.",
         "coordinates": [11.962309392880487, 121.9252036955874]
     },
@@ -56,6 +61,7 @@
         "contact": "09984828490",
         "email": "info@cafedelsol.com.ph",
         "link": "http://www.cafedelsol.com.ph/",
+        "video": "",
         "notes": "Boracay’s first modern, full-service coffee shop",
         "coordinates": [11.962035601385692, 121.92460365326014]
     },
@@ -66,6 +72,7 @@
         "contact": "0926 084 4793",
         "email": "boracay@cafemaruja.com",
         "link": "https://www.cafemaruja.com/",
+        "video": "",
         "notes": "",
         "coordinates": [11.953894696583406, 121.9291777379143]
     },
@@ -76,6 +83,7 @@
         "contact": "0956 229 4968",
         "email": "mrdlabettola@gmail.com",
         "link": "https://web.facebook.com/pages/MrD-La-Bettola-Boracay/102650864581155",
+        "video": "",
         "notes": "",
         "coordinates": [11.965042915924352, 121.9277599244237]
     },
@@ -86,6 +94,7 @@
         "contact": "0956 543 5447",
         "email": "taciosboracay@gmail.com",
         "link": "https://web.facebook.com/tacios.bistro.boracay",
+        "video": "",
         "notes": "Tacio's of Cubao Expo is now open at Seabird Resort Boracay. Delicious and affordable!",
         "coordinates": [11.968726380530043, 121.9189712168304]
     },
@@ -96,6 +105,7 @@
         "contact": "0977 857 7155",
         "email": "lemonicafe@yahoo.com.ph",
         "link": "https://web.facebook.com/Lemonicafe.Boracay",
+        "video": "",
         "notes": "",
         "coordinates": [11.962420188636912, 121.92478713791445]
     },
@@ -106,6 +116,7 @@
         "contact": "0908-888-6059",
         "email": "donriteboracay@yahoo.com",
         "link": "https://web.facebook.com/donritedeliboracay",
+        "video": "",
         "notes": "",
         "coordinates": [11.95960838722332, 121.92875580907808]
     }
