@@ -98,6 +98,7 @@ input {
 
 button {
     outline: none !important;
+    background: transparent;
 }
 
 .main-content {
@@ -635,10 +636,6 @@ section#signup {
 
 }
 
-section#signup::before {
-    background: url(../images/components/separator.png) no-repeat;
-}
-
 section#signup h3 {
     font-weight: 100;
     text-align: left;
@@ -652,7 +649,7 @@ section#signup h3 strong {
 }
 
 section#signup .section-title:after {
-    content: url(../images/components/);
+    content: "";
     display: block;
     width: 70px;
     margin: 0;
@@ -1202,13 +1199,22 @@ footer .copyright p {
     box-shadow: 5.5px 9px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
+#explore .card-item {
+    margin-top:calc(100% - 120px);
+}
+
+#deals .card-item {
+    margin-top:calc(100% - 160px);
+}
+
 .card-item {
     position: relative;
     width: 100%;
-    height: 50%;
+    height: 270px;
     padding: 10px;
-    margin-top: 150px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+    margin-bottom: 0;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.85), transparent); /* Safari */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent); /* Standard syntax */
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     color: #f6f8f8;
@@ -1221,9 +1227,10 @@ footer .copyright p {
 }
 
 .card-item.clicked {
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.35)); /* Safari */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.35));
     margin-top: 0px !important;
-    height: 100% !important;
+    height: 270px !important;
     -webkit-transition: 0.3s ease-out;
     -moz-transition: 0.3s ease-out;
     -ms-transition: 0.3s ease-out;
