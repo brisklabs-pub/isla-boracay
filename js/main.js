@@ -136,27 +136,26 @@ function exploreCardView(item, index) {
   directionBtn.setAttribute('class', 'card-btn');
   directionBtn.innerText = `DIRECTION`;
 
-  // Video
-  const videoBtn =  document.createElement('button');
-  videoBtn.setAttribute('class', 'card-btn');
-  videoBtn.innerText = `VIDEO`;
-
   cardMore.appendChild(visitBtn);
   cardMore.appendChild(directionBtn);
-  if (item.video != "") {
-    const videoLink =  document.createElement('a');
-    videoLink.setAttribute("href", item.video);
-    videoLink.setAttribute("class", "popup-video");
-    videoBtn.appendChild(videoLink);
+  
+  if (item.video !== "") {
+    // Video
+    const videoBtn =  document.createElement('button');
+    videoBtn.setAttribute('class', 'card-btn');
+    videoBtn.innerHTML = "VIDEO";
+    onClick(videoBtn, ()=> {
+      openVideoPopup("https://gnodesign.com/templates/swimmerland/video/video.mp4");
+    });
     cardMore.appendChild(videoBtn);
   }
-  cardMore.appendChild(videoBtn);
   cardItem.appendChild(cardMore);
   card.appendChild(cardItem);
 
   onClick(directionBtn, ()=> {
     openMapPopup(item.coordinates, item);
   });
+
 
   onClick(visitBtn, ()=> {
     window.open(item.link, "_blank");
@@ -204,6 +203,13 @@ function openMapPopup(coordinates, item) {
   params.append('address', item.address);
   var queryString = params.toString();
   iframe.src = "https://www.islaboracay.xyz/mapview.html?" + queryString;
+}
+
+// Function to open the popup
+function openVideoPopup(url) {
+  var videoIframe = document.getElementById("videoIframe");
+  videoIframe.src = url;
+  videoPopup.style.display = "block";
 }
 
 // DEALS
@@ -536,7 +542,6 @@ function tagEvent(event_label) {
       $('.popup-video').magnificPopup({
           type: 'iframe',
           mainClass: 'mfp-fade',
-
           iframe: {
               markup: '<div class="mfp-iframe-scaler">' +
                   '<div class="mfp-close"></div>' +

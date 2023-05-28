@@ -1,5 +1,16 @@
 [
     {
+        "name": "Salsa Fusion Restaurant",
+        "address": "G/F Serene La Playa, Station 1, Boracay",
+        "thumbnail": "./images/explore/resto/salsa-fusio-restaurant.jpg",
+        "contact": "",
+        "email": "",
+        "link": "https://serenehotels.com/salsa/",
+        "video": "",
+        "notes": "Embark on a culinary adventure as you explore a new world of flavors at Salsa!",
+        "coordinates": [11.965012827426495, 121.9235232971947]
+    },
+    {
         "name": "Back Beach Burgers",
         "address": "3rd floor of Building fronting the Grotto, Station 1",
         "thumbnail": "./images/explore/resto/back-beach-burger.jpeg",
