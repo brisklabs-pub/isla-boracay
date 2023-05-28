@@ -3,6 +3,7 @@ const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/m
 var coordinates = [11.969, 121.924];
 var currentName = null;
 var modal = elementBy('modal-popup');
+var videoModal = elementBy('videoPopup');
 
 const initialItems = 5;
 const cardsToShowIncrement = 6;
@@ -74,6 +75,12 @@ window.onload = (event) => {
   window.addEventListener('click', function(event) {
     if (event.target == modal) {
       modal.className = modal.className.replace(" open", "");
+    }
+  });
+  // Video popup
+  window.addEventListener('click', function(event) {
+    if (event.target == videoModal) {
+      videoModal.className = modal.className.replace(" open", "");
     }
   });
 };
@@ -209,6 +216,8 @@ function openMapPopup(coordinates, item) {
 function openVideoPopup(url) {
   var videoIframe = document.getElementById("videoIframe");
   videoIframe.src = url;
+
+  const videoPopup = elementBy('videoPopup');
   videoPopup.style.display = "block";
 }
 
