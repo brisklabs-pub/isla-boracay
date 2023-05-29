@@ -101,6 +101,7 @@ function addExploreData(type) {
           openItem(item.name);
         });
         tab.appendChild(row);
+        assignMagnificPopup();
       }
       const loadMore = elementBy('loadMore-'+type);
       onClick(loadMore, ()=> { 
@@ -148,12 +149,10 @@ function exploreCardView(item, index) {
   
   if (item.video !== "") {
     // Video
-    const videoBtn =  document.createElement('button');
-    videoBtn.setAttribute('class', 'card-btn');
-    videoBtn.innerHTML = "VIDEO";
-    onClick(videoBtn, ()=> {
-      openVideoPopup("https://gnodesign.com/templates/swimmerland/video/video.mp4");
-    });
+    const videoBtn =  document.createElement('a');
+    videoBtn.setAttribute('href', item.video);
+    videoBtn.setAttribute('class', 'video-popup card-btn');
+    videoBtn.innerText = "VIDEO";
     cardMore.appendChild(videoBtn);
   }
   cardItem.appendChild(cardMore);
@@ -328,6 +327,30 @@ function showCards(section) {
     loadmsg.innerHTML = '<div class="alert alert-success">No more items to load.</div>';
     loadmsg.style.opacity = 1;
   }
+}
+
+function assignMagnificPopup() {
+  $('.video-popup').magnificPopup({
+    type: 'iframe',
+    iframe: {
+      patterns: {
+        youtube: {
+          index: 'youtube.com/',
+          id: 'v=',
+          src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+        },
+        vimeo: {
+          index: 'vimeo.com/',
+          id: '/',
+          src: 'https://player.vimeo.com/video/%id%?autoplay=1'
+        },
+        gmaps: {
+          index: '//maps.google.',
+          src: '%id%&output=embed'
+        }
+      }
+    }
+  });
 }
 
 // HELPHER METHOD
@@ -546,41 +569,6 @@ function tagEvent(event_label) {
               }
 
           });
-      });
-
-      $('.popup-video').magnificPopup({
-          type: 'iframe',
-          mainClass: 'mfp-fade',
-          iframe: {
-              markup: '<div class="mfp-iframe-scaler">' +
-                  '<div class="mfp-close"></div>' +
-                  '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                  '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
-
-              patterns: {
-                  youtube: {
-                      index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
-
-                      id: 'v=', // String that splits URL in a two parts, second part should be %id%
-                      // Or null - full URL will be returned
-                      // Or a function that should return %id%, for example:
-                      // id: function(url) { return 'parsed id'; }
-
-                      src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
-                  },
-                  vimeo: {
-                      index: 'vimeo.com/',
-                      id: '/',
-                      src: '//player.vimeo.com/video/%id%?autoplay=1'
-                  },
-                  gmaps: {
-                      index: '//maps.google.',
-                      src: '%id%&output=embed'
-                  }
-                  // you may add here more sources
-              },
-              srcAction: 'iframe_src', // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
-          }
       });
 
 
