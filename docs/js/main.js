@@ -1,5 +1,5 @@
-const exploreBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/explore/';
-const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/datas/deals/';
+const exploreBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/docs/datas/explore/';
+const dealsBaseURL = 'https://raw.githubusercontent.com/brisklabs/isla-boracay/main/docs/datas/deals/';
 var coordinates = [11.969, 121.924];
 var currentName = null;
 var modal = elementBy('modal-popup');
