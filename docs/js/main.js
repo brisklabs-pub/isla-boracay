@@ -5,7 +5,7 @@ var currentName = null;
 var modal = elementBy('modal-popup');
 var videoModal = elementBy('videoPopup');
 
-const initialItems = 5;
+const initialItems = 8;
 const cardsToShowIncrement = 6;
 
 window.onload = (event) => {

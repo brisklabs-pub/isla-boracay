@@ -1,4 +1,14 @@
-[
+[    {
+    "name": "Smooth Cafe Boracay",
+    "address": "Smooth Cafe Boracay, Station 1 , Boracay",
+    "thumbnail": "./images/explore/resto/smooth-cafe-boracay.jpg",
+    "contact": "",
+    "email": "",
+    "link": "https://smoothcafeboracay.com/",
+    "video": "",
+    "notes": "Smooth Cafe Boracay is a cozy and inviting coffee shop that boasts a picturesque beach front location.",
+    "coordinates": [11.967205694361494, 121.92043542596487]
+    },
     {
         "name": "Salsa Fusion Restaurant",
         "address": "G/F Serene La Playa, Station 1, Boracay",
