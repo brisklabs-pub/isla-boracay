@@ -54,22 +54,6 @@ window.onload = (event) => {
   addExploreData('party');
   addExploreData('shop');
 
-  // DEALS
-  openDealTab('relax-deal');
-  const activities_deal = elementBy('activities-deal-tab');
-  onClick(activities_deal, ()=>{ 
-    openDealTab('activities-deal');
-    tagEvent('did_open_deals_activities');
-  });
-  
-  const relax_deal = elementBy('relax-deal-tab');
-  onClick(relax_deal, ()=>{ 
-    openDealTab('relax-deal');
-    tagEvent('did_open_deals_relax');
-  });
-
-  addDealsData('relax');
-  addDealsData('activities');
 
   // Direction popup
   window.addEventListener('click', function(event) {
@@ -211,48 +195,6 @@ function openMapPopup(coordinates, item) {
   iframe.src = "https://www.islaboracay.xyz/mapview.html?" + queryString;
 }
 
-// Function to open the popup
-function openVideoPopup(url) {
-  var videoIframe = document.getElementById("videoIframe");
-  videoIframe.src = url;
-
-  const videoPopup = elementBy('videoPopup');
-  videoPopup.style.display = "block";
-}
-
-// DEALS
-function addDealsData(type) {
-  var request = new XMLHttpRequest();
-  request.open('GET', dealsBaseURL + type +'.json', true);
-  request.onreadystatechange = function() {
-    if (request.readyState === 4 && request.status === 200) {
-      var json = JSON.parse(request.responseText);
-      let tab = elementBy(type + '-deal-content');
-      removeAllDOMChildren(tab);
-      for (index in json) {
-        const item = json[index];
-        const row = dealCardView(item);
-        tab.appendChild(row);
-      }
-    }
-  };
-  request.send();
-}
-
-function dealCardView(item) {
-  const card = document.createElement('div');
-  card.setAttribute('class', 'card');
-  card.setAttribute('style', `background-image:url(${item.thumbnail}); background-size: cover; background-position: center;`);
-  card.innerHTML = `
-    <div class ="card-item">
-      <h3 class="card-title">${item.title}</h3>
-      <p class="card-text">${item.company}</p>
-      <button class="card-solid-btn">
-        <a href=${item.link} target="_blank">READ MORE</a>
-      </button>
-    </div>`;
-  return card;
-}
 
 function openExploreTab(page) {
   // Declare all variables
@@ -266,28 +208,6 @@ function openExploreTab(page) {
 
   // Get all elements with class="main-tab-link" and remove the class "active"
   tablinks = document.getElementsByClassName("explore-tab-links");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  var selected = elementBy(page);
-  selected.style.display = "block";
-  var tab = elementBy(page + "-tab");
-  tab.className += " active";
-}
-
-function openDealTab(page) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="main-tab-content " and hide them
-  tabcontent = document.getElementsByClassName("deal-tab-content");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="main-tab-link" and remove the class "active"
-  tablinks = document.getElementsByClassName("deal-tab-links");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
@@ -383,8 +303,6 @@ function tagEvent(event_label) {
 }
 
 
-
-
 (function ($) {
 
   "use strict";
@@ -439,135 +357,6 @@ function tagEvent(event_label) {
               'scrollTop': $target.offset().top
           }, 1300, function () {
               window.location.hash = target;
-          });
-      });
-
-
-
-      /*----------------------------------------------------
-        SHUFFLE IMAGE GALLERY
-      ----------------------------------------------------*/
-
-      var shuffleme = (function ($) {
-          'use strict';
-          var $grid = $('#grid'), //locate what we want to sort 
-              $filterOptions = $('.gallery-sorting li'), //locate the filter categories
-              $sizer = $grid.find('.shuffle_sizer'), //sizer stores the size of the items
-
-              init = function () {
-
-                  // None of these need to be executed synchronously
-                  setTimeout(function () {
-                      listen();
-                      setupFilters();
-                  }, 100);
-
-                  // initialize the plugin
-                  $grid.shuffle({
-                      itemSelector: '[class*="col-"]',
-                      sizer: $sizer,
-                      speed: 300
-                  });
-              },
-
-
-
-              // Set up button clicks
-              setupFilters = function () {
-                  var $btns = $filterOptions.children();
-                  $btns.on('click', function (e) {
-                      e.preventDefault();
-                      var $this = $(this),
-                          isActive = $this.hasClass('active'),
-                          group = isActive ? 'all' : $this.data('group');
-
-                      // Hide current label, show current label in title
-                      if (!isActive) {
-                          $('.gallery-sorting li a').removeClass('active');
-                      }
-
-                      $this.toggleClass('active');
-
-                      // Filter elements
-                      $grid.shuffle('shuffle', group);
-                  });
-
-                  $btns = null;
-              },
-
-
-              // Re layout shuffle when images load. This is only needed
-              // below 768 pixels because the .picture-item height is auto and therefore
-
-              listen = function () {
-                  var debouncedLayout = $.throttle(300, function () {
-                      $grid.shuffle('update');
-                  });
-
-                  // Get all images inside shuffle
-                  $grid.find('img').each(function () {
-                      var proxyImage;
-
-                      // Image already loaded
-                      if (this.complete && this.naturalWidth !== undefined) {
-                          return;
-                      }
-
-                      // If none of the checks above matched, simulate loading on detached element.
-                      proxyImage = new Image();
-                      $(proxyImage).on('load', function () {
-                          $(this).off('load');
-                          debouncedLayout();
-                      });
-
-                      proxyImage.src = this.src;
-                  });
-
-                  setTimeout(function () {
-                      debouncedLayout();
-                  }, 500);
-              };
-
-          return {
-              init: init
-          };
-      }(jQuery));
-
-      shuffleme.init(); //filter portfolio
-
-
-      /*----------------------------------------------------
-        MAGNIFIC POP UP
-      ----------------------------------------------------*/
-
-      $('section#gallery .gallery-items').each(function () { // the containers for all your galleries
-          $(this).magnificPopup({
-              delegate: 'a', // the selector for gallery item
-              type: 'image',
-              mainClass: 'mfp-fade',
-
-              gallery: {
-                  enabled: true
-              },
-
-              retina: {
-                  ratio: 1, // Increase this number to enable retina image support.
-                  replaceSrc: function (item, ratio) {
-                      return item.src.replace(/\.\w+$/, function (m) {
-                          return '@2x' + m;
-                      });
-                  }
-              },
-
-              zoom: {
-                  enabled: true, // change to 'false' if you want to disable the zoming effect
-                  duration: 300, // duration of the effect, in milliseconds
-                  easing: 'ease-in-out', // CSS transition easing function
-                  opener: function (openerElement) {
-                      return openerElement.is('img') ? openerElement : openerElement.find('img');
-                  }
-              }
-
           });
       });
 
